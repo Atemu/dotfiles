@@ -22,3 +22,6 @@ set clipboard=unnamedplus
 
 " Disable swap
 set noswapfile
+
+" always highlight sytax
+syntax enable
