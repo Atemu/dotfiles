@@ -32,3 +32,6 @@ set cursorcolumn
 
 " set the cursorline color
 hi cursorline cterm=none ctermbg=darkgrey 
+
+" Enable Hybrid line numbers
+set number relativenumber
