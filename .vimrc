@@ -35,3 +35,6 @@ hi cursorline cterm=none ctermbg=darkgrey
 
 " Enable Hybrid line numbers
 set number relativenumber
+
+" Enable wildmenu for file selection
+set wildmenu
