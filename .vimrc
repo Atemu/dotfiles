@@ -38,3 +38,6 @@ set number relativenumber
 
 " Enable wildmenu for file selection
 set wildmenu
+
+" enable fuzzy file search
+set path+=**
