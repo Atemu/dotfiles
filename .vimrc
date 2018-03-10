@@ -19,3 +19,6 @@ runtime! archlinux.vim
 
 " Make clipboard X clipboard
 set clipboard=unnamedplus
+
+" Disable swap
+set noswapfile
