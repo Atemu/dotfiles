@@ -16,3 +16,6 @@ runtime! archlinux.vim
 
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
+
+" Make clipboard X clipboard
+set clipboard=unnamedplus
