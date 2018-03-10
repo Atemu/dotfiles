@@ -5,5 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+#load aliases from alias file:
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 PS1='[\u@\h \W]\$ '
