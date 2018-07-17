@@ -25,3 +25,6 @@ fi
 
 #enable vi mode
 set -o vi
+
+#enable thefuck
+[[ -f "$(which fuck)" ]] && eval $(thefuck --alias)
