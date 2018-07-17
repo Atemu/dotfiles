@@ -22,3 +22,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#enable vi mode
+set -o vi
