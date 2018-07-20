@@ -27,4 +27,4 @@ fi
 set -o vi
 
 #enable thefuck
-[[ -f "$(which fuck)" ]] && eval $(thefuck --alias)
+which fuck > /dev/null 2>&1 && eval $(thefuck --alias)
