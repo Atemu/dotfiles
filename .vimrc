@@ -41,3 +41,7 @@ set wildmenu
 
 " enable fuzzy file search
 set path+=**
+
+" newline without insert, breaks markers and center of the buffer hotkey
+nmap m o<Esc>
+nmap M O<Esc>
