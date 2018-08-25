@@ -26,13 +26,6 @@ set noswapfile
 " always highlight sytax
 syntax enable
 
-" enable cursor line and column
-set cursorline
-set cursorcolumn
-
-" set the cursorline color
-hi cursorline cterm=none ctermbg=darkgrey 
-
 " Enable Hybrid line numbers
 set number relativenumber
 
