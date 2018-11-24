@@ -41,3 +41,6 @@ nmap M O<Esc>
 
 " 2-space tabstop
 set tabstop=2
+
+" 2-space tab for >> and <<
+set shiftwidth=2
