@@ -44,3 +44,6 @@ set tabstop=2
 
 " 2-space tab for >> and <<
 set shiftwidth=2
+
+" enable autoindent
+set autoindent
