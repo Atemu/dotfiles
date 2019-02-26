@@ -1,6 +1,14 @@
  URxvt*font: xft:vga
  URxvt*scrollBar: false
 
+XTerm*renderFont: true
+XTerm*faceName: vga
+XTerm*faceSize: 10
+
+UXTerm*renderFont: true
+UXTerm*faceName: vga
+UXTerm*faceSize: 10
+
 ! Below is the Nord color scheme:
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
 ! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
