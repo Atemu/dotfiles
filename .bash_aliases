@@ -1,6 +1,6 @@
 alias ls='ls --time-style=long-iso'
-alias ll='ls -lh --time-style=long-iso'
-alias la='ls -lAh --time-style=long-iso'
+alias ll='ls -lhv --time-style=long-iso'
+alias la='ls -lAhv --time-style=long-iso'
 alias gd='rclone mount Google\ Drive: "$HOME"/Google\ Drive'
 alias 8601='date +%Y-%m-%dT%H\:%M\:%S'
 alias cpr='cp --reflink=auto'
