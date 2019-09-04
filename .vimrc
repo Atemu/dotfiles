@@ -47,3 +47,6 @@ set shiftwidth=2
 
 " enable autoindent
 set autoindent
+
+" Stop linewrap from splitting words
+set linebreak
