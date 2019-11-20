@@ -20,8 +20,5 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 #set GPG config home
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 
-#enable touch scrollin in FF
-export MOZ_USE_XINPUT2=1
-
 #libvirt connect to system by default
 export LIBVIRT_DEFAULT_URI="qemu:///system"
