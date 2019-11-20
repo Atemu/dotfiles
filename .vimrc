@@ -50,3 +50,6 @@ set autoindent
 
 " Stop linewrap from splitting words
 set linebreak
+
+" Always display n lines under/above cursor
+set scrolloff=5
