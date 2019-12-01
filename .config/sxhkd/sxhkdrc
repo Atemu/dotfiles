@@ -125,3 +125,17 @@ super + F6
  brightnessctl set 5%-
 super + F7
  brightnessctl set +5%
+
+# Handle Audio buttons
+# Taken from https://github.com/cstrahan/dotfiles/blob/d19e34d4e5197e0effd2b05b070d143017de92ba/.config/sxhkd/sxhkdrc
+
+XF86AudioMute
+    pactl set-sink-mute '@DEFAULT_SINK@' toggle
+
+XF86AudioLowerVolume
+    pactl set-sink-mute '@DEFAULT_SINK@' 0; \
+    pactl set-sink-volume '@DEFAULT_SINK@' -2%
+
+XF86AudioRaiseVolume
+    pactl set-sink-mute '@DEFAULT_SINK@' 0; \
+    pactl set-sink-volume '@DEFAULT_SINK@' +2%
