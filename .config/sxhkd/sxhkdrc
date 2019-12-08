@@ -134,8 +134,8 @@ XF86AudioMute super + F3
 
 XF86AudioLowerVolume super + F8
     pactl set-sink-mute '@DEFAULT_SINK@' 0; \
-    pactl set-sink-volume '@DEFAULT_SINK@' -2%
+    pactl set-sink-volume '@DEFAULT_SINK@' -1%
 
 XF86AudioRaiseVolume super + F9
     pactl set-sink-mute '@DEFAULT_SINK@' 0; \
-    pactl set-sink-volume '@DEFAULT_SINK@' +2%
+    pactl set-sink-volume '@DEFAULT_SINK@' +1%
