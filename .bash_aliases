@@ -8,6 +8,6 @@ alias 8601u='echo $(8601 -u)Z'
 alias 8601ue='echo $(8601e -u)Z'
 alias cpr='cp --reflink=auto'
 alias sudo='sudo ' #pass aliases to sudo https://askubuntu.com/a/22043/863714
-alias iomon='iostat --human 1 /dev/sd?' #io monitoring command
+alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk?' #io monitoring command
 alias please='sudo '
 alias fucking='sudo '
