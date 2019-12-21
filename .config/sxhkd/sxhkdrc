@@ -122,9 +122,9 @@ super + {Left,Down,Up,Right}
 
 # Handle brightness
 super + F6
- brightnessctl set 5%-
+ brightnessctl set 3%-
 super + F7
- brightnessctl set +5%
+ brightnessctl set +3%
 
 # Handle Audio buttons
 # Taken from https://github.com/cstrahan/dotfiles/blob/d19e34d4e5197e0effd2b05b070d143017de92ba/.config/sxhkd/sxhkdrc
