@@ -143,4 +143,4 @@ XF86AudioRaiseVolume super + F9
 # LightDM lock shortcut
 
 super + Pause
-    dm-tool lock
+    physlock
