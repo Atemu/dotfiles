@@ -11,3 +11,4 @@ alias sudo='sudo ' #pass aliases to sudo https://askubuntu.com/a/22043/863714
 alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk?' #io monitoring command
 alias please='sudo '
 alias fucking='sudo '
+alias applyconfig='sudo git -C /etc/nixos/ fetch && sudo git -C /etc/nixos/ reset --hard origin/master'
