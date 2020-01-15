@@ -7,4 +7,7 @@ xset r rate 224 24
 
 [[ -f ~/.fehbg ]] && ~/.fehbg &
 sxhkd &
-exec bspwm
+bspwm &
+pid=$!
+
+wait $pid
