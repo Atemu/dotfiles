@@ -12,6 +12,8 @@ PS1='[\u@\h \W]\$ '
 
 # 8601 with a TAB at the end
 HISTTIMEFORMAT='%Y-%m-%dT%H:%M:%S'$'\t'
+# Unlimited history size
+HISTFILESIZE=-1
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
