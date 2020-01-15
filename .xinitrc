@@ -9,5 +9,7 @@ xset r rate 224 24
 sxhkd &
 bspwm &
 pid=$!
+# Wait for bspwm to actually start
+while true ; do [ -S /tmp/bspwm*-socket ] && break ; sleep 0.1 ; done
 
 wait $pid
