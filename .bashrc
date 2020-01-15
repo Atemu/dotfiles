@@ -16,8 +16,9 @@ HISTTIMEFORMAT='%Y-%m-%dT%H:%M:%S'$'\t'
 HISTFILESIZE=-1
 HISTSIZE=-1
 # "If the list of values includes  ignorespace,  lines which begin with a space
-# character are not saved in the history list."
-HISTCONTROL=ignorespace
+# character are not saved in the history list. A value of ignoredups causes lines
+# matching the previous history entry to not be saved."
+HISTCONTROL=ignorespace,ignoredups
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
