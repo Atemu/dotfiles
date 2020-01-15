@@ -19,6 +19,8 @@ HISTSIZE=-1
 # character are not saved in the history list. A value of ignoredups causes lines
 # matching the previous history entry to not be saved."
 HISTCONTROL=ignorespace,ignoredups
+# append to history, don't overwrite it
+shopt -s histappend
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
