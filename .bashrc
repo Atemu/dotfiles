@@ -14,6 +14,7 @@ PS1='[\u@\h \W]\$ '
 HISTTIMEFORMAT='%Y-%m-%dT%H:%M:%S'$'\t'
 # Unlimited history size
 HISTFILESIZE=-1
+HISTSIZE=-1
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
