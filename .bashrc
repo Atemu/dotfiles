@@ -15,6 +15,9 @@ HISTTIMEFORMAT='%Y-%m-%dT%H:%M:%S'$'\t'
 # Unlimited history size
 HISTFILESIZE=-1
 HISTSIZE=-1
+# "If the list of values includes  ignorespace,  lines which begin with a space
+# character are not saved in the history list."
+HISTCONTROL=ignorespace
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
