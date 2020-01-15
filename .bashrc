@@ -21,6 +21,11 @@ HISTSIZE=-1
 HISTCONTROL=ignorespace,ignoredups
 # append to history, don't overwrite it
 shopt -s histappend
+# attempt to save all lines of a multiple-line command in the same history entry
+shopt -s cmdhist
+# save multi-line commands to the history with embedded newlines
+shopt -s lithist
+
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
