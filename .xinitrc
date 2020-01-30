@@ -16,7 +16,7 @@ while true ; do [ -S /tmp/bspwm*-socket ] && break ; sleep 0.1 ; done
 for i in {0..100}
 do
     if [ -S /tmp/emacs$UID/server ] ; then
-        emacsclient -c 2> /tmp/emacserr > /tmp/emacslog &
+        emacsclient -c
         break
     else
         sleep 0.1
