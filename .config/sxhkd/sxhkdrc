@@ -149,3 +149,8 @@ super + Escape
 
 super + e
     emacsclient -c
+
+# Reload WiFi
+
+super + r
+      nmcli radio wifi off ; nmcli radio wifi on
