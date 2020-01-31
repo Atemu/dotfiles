@@ -11,7 +11,7 @@ super + @space
 	dmenu_run
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + Pause
 	pkill -USR1 -x sxhkd
 
 #
@@ -142,5 +142,5 @@ XF86AudioRaiseVolume super + F9
 
 # Lock screen
 
-super + Pause
+super + Escape
     physlock
