@@ -140,7 +140,7 @@ XF86AudioRaiseVolume super + F9
     pactl set-sink-mute '@DEFAULT_SINK@' 0; \
     pactl set-sink-volume '@DEFAULT_SINK@' +1%
 
-# LightDM lock shortcut
+# Lock screen
 
 super + Pause
     physlock
