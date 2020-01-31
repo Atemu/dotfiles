@@ -144,3 +144,8 @@ XF86AudioRaiseVolume super + F9
 
 super + Escape
     physlock
+
+# Open another Emacs frame
+
+super + e
+    emacsclient -c
