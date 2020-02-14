@@ -34,6 +34,8 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; Disable the annoying 1s delay on SPC
+(setq which-key-idle-delay 0.01)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
