@@ -37,6 +37,9 @@
 ;; Disable the annoying 1s delay on SPC
 (setq which-key-idle-delay 0.01)
 
+;; Disable smartparens (inserts a second ` ' " { etc.)
+(smartparens-global-mode -1)
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
