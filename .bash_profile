@@ -22,3 +22,7 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 
 #libvirt connect to system by default
 export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+# Set default remote and branch for nixos-config
+export NIXOS_CONFIG_REMOTE=origin
+export NIXOS_CONFIG_BRANCH=master
