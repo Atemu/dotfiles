@@ -74,6 +74,7 @@
 (map! :after company
       (:map company-active-map
         "<tab>" #'company-complete-selection
+        "<return>" #'evil-ret
         )
       )
 
