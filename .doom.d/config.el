@@ -68,6 +68,8 @@
 (setq
  ;; Disable completion popup delay
  company-idle-delay 0.01
+ ;; Show completion immediately
+ company-minimum-prefix-length 1
  )
 
 ;; Here are some additional functions/macros that could help you configure Doom:
