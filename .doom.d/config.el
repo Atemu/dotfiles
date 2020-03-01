@@ -40,6 +40,14 @@
 ;; Disable smartparens (inserts a second ` ' " { etc.)
 (smartparens-global-mode -1)
 
+;; evil-snipe
+;; Disable 2-cahr sniping in evil-snipe. I prefer to have s be the default evil substitute
+(map! :after evil-snipe
+      :map evil-snipe-local-mode-map
+      :n "s" nil
+      :n "S" nil
+      )
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
