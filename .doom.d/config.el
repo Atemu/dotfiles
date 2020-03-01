@@ -101,6 +101,7 @@
       ;; Enhance with my own keybinds
       "<tab>" #'ivy-alt-done ;; Immediately select the current item
       "C-l" #'ivy-backward-kill-word
+      "<backtab>" #'ivy-backward-kill-word
       )
 
 ;; Here are some additional functions/macros that could help you configure Doom:
