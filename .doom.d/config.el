@@ -89,6 +89,16 @@
       "C-r" #'helm-minibuffer-history
       )
 
+;; ivy
+(map! :after ivy
+      :map ivy-minibuffer-map
+      ;; Restore some keybinds to default emacs ones ivy
+      "C-k" #'ivy-kill-line
+      "C-v" #'ivy-scroll-up-command
+      "M-v" #'ivy-scroll-down-command
+      "C-r" #'ivy-reverse-i-search
+      "C-d" #'ivy-delete-char
+      )
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
