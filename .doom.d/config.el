@@ -43,6 +43,9 @@
 ;; Enable rainbow delimiters everywhere
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
+;; Disable auto-fill-mode by default (you can use M-q to refill manually)
+(remove-hook 'text-mode-hook #'auto-fill-mode)
+
 ;; evil-snipe
 ;; Disable 2-cahr sniping in evil-snipe. I prefer to have s be the default evil substitute
 (map! :after evil-snipe
