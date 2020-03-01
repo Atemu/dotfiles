@@ -64,6 +64,12 @@
       :n "S" nil
       )
 
+;; compay-mode
+(setq
+ ;; Disable completion popup delay
+ company-idle-delay 0.01
+ )
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
