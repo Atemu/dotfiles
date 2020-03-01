@@ -71,6 +71,12 @@
  ;; Show completion immediately
  company-minimum-prefix-length 1
  )
+(map! :after company
+      (:map company-active-map
+        "<tab>" #'company-complete-selection
+        )
+      )
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
