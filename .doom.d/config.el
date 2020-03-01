@@ -40,6 +40,9 @@
 ;; Disable smartparens (inserts a second ` ' " { etc.)
 (smartparens-global-mode -1)
 
+;; Enable rainbow delimiters everywhere
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 ;; evil-snipe
 ;; Disable 2-cahr sniping in evil-snipe. I prefer to have s be the default evil substitute
 (map! :after evil-snipe
