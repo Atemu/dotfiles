@@ -98,6 +98,8 @@
       "M-v" #'ivy-scroll-down-command
       "C-r" #'ivy-reverse-i-search
       "C-d" #'ivy-delete-char
+      ;; Enhance with my own keybinds
+      "<tab>" #'ivy-alt-done ;; Immediately select the current item
       )
 
 ;; Here are some additional functions/macros that could help you configure Doom:
