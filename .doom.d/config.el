@@ -78,6 +78,17 @@
         )
       )
 
+;; helm
+(map! :after helm
+      ;; Restore some keybinds to default
+      :map helm-map
+      "C-l" #'helm-find-files-up-one-level
+      "C-k" #'helm-delete-minibuffer-contents
+      "C-v" #'helm-next-page
+      "M-v" #'helm-previous-page
+      "C-r" #'helm-minibuffer-history
+      )
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
