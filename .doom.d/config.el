@@ -52,13 +52,11 @@
 (remove-hook 'git-commit-setup-hook #'git-commit-turn-on-auto-fill)
 
 ;; evil-mode
-;; Restore some keybinds to default emacs ones in insert mode
-(map!
- (:i
-  "C-y" #'evil-paste-after
+;; Enable hybrid keybinds (emacs keybinds in insert-mode)
+(use-package evil
+  :custom
+  evil-disable-insert-state-bindings t
   )
- )
-
 ;; evil-snipe
 ;; Disable 2-cahr sniping in evil-snipe. I prefer to have s be the default evil substitute
 (map! :after evil-snipe
