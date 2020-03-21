@@ -43,6 +43,9 @@
 ;; Enable rainbow delimiters everywhere
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
+;; Highlight trailing whitespaces in prog-mode
+(add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
+
 ;; Disable auto-fill-mode by default (you can use M-q to refill manually)
 (remove-hook 'text-mode-hook #'auto-fill-mode)
 ;; Disable auto-fill-mode in git commit aswell
