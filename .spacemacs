@@ -43,6 +43,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
+     (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (java :variables java-backend 'lsp)
      ;; lsp
      ;; markdown
