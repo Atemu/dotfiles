@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
+     docker
      emacs-lisp
      git
      helm
