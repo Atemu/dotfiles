@@ -37,9 +37,13 @@ set $lowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
 set $mute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 set $micMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioRaiseVolume $raiseVolume
+bindsym $mod+F9 $raiseVolume
 bindsym XF86AudioLowerVolume $lowerVolume
+bindsym $mod+F8 $lowerVolume
 bindsym XF86AudioMute $mute
+bindsym $mod+F3 $mute
 bindsym XF86AudioMicMute $micMute
+bindsym $mod+F2 $micMute
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
