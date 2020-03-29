@@ -6,8 +6,7 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &2>/dev/null
 xset r rate 224 24
 
 [[ -f ~/.fehbg ]] && ~/.fehbg &
-sxhkd &
-bspwm &
+i3 &
 pid=$!
 # Wait for bspwm to actually start
 while true ; do [ -S /tmp/bspwm*-socket ] && break ; sleep 0.1 ; done
