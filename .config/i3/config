@@ -45,6 +45,12 @@ bindsym $mod+F3 $mute
 bindsym XF86AudioMicMute $micMute
 bindsym $mod+F2 $micMute
 
+# Use brightnessctl to adjust the brightness of the screen
+set $raiseBrightness exec --no-startup-id brightnessctl set +3%
+set $lowerBrightness exec --no-startup-id brightnessctl set 3%-
+bindsym $mod+F7 $raiseBrightness
+bindsym $mod+F6 $lowerBrightness
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
