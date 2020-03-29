@@ -87,6 +87,9 @@ bindsym $mod+minus split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# toggle borders
+bindsym $mod+b exec i3-msg border toggle
+
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
