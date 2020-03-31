@@ -1,6 +1,5 @@
 alias ll='ls -lhv --time-style=long-iso'
 alias la='ls -lAhv --time-style=long-iso'
-alias gd='rclone mount Google\ Drive: "$HOME"/Google\ Drive'
 alias 8601='date +%Y%m%dT%H%M%S'
 alias 8601e='date +%Y-%m-%dT%H\:%M\:%S'
 alias 8601u='echo $(8601 -u)Z'
