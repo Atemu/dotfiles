@@ -7,4 +7,5 @@ exec systemctl start --user graphical-session.target
 exec xrdb ~/.Xresources
 
 input type:keyboard {
+  xkb_options caps:escape
 }
