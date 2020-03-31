@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-exec X "$@"
+exec X -ardelay 224 -arinterval 24 "$@"
