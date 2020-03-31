@@ -1,4 +1,3 @@
-alias ls='ls --time-style=long-iso'
 alias ll='ls -lhv --time-style=long-iso'
 alias la='ls -lAhv --time-style=long-iso'
 alias gd='rclone mount Google\ Drive: "$HOME"/Google\ Drive'
