@@ -1,3 +1,4 @@
+alias l='ls -lAhv --time-style=long-iso'
 alias ll='ls -lhv --time-style=long-iso'
 alias la='ls -lAhv --time-style=long-iso'
 alias 8601='date +%Y%m%dT%H%M%S'
