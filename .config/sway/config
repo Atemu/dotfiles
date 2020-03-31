@@ -5,3 +5,6 @@ exec systemctl start --user graphical-session.target
 
 # Merge Xresources for Xwayland
 exec xrdb ~/.Xresources
+
+input type:keyboard {
+}
