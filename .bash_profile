@@ -9,8 +9,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-#set vim as default editor
-export EDITOR=vim
+export EDITOR=emacsclient
 export SUDO_EDITOR=$EDITOR
 
 #fix java program rendering and enable text AA
