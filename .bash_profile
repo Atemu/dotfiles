@@ -11,7 +11,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 #set vim as default editor
 export EDITOR=vim
-export SUDO_EDITOR=vim
+export SUDO_EDITOR=$EDITOR
 
 #fix java program rendering and enable text AA
 export _JAVA_AWT_WM_NONREPARENTING=1
