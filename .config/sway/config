@@ -8,4 +8,5 @@ exec xrdb ~/.Xresources
 
 input type:keyboard {
   xkb_options caps:escape
+  repeat_delay 224
 }
