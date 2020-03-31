@@ -12,10 +12,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export EDITOR=emacsclient
 export SUDO_EDITOR=$EDITOR
 
-#fix java program rendering and enable text AA
-export _JAVA_AWT_WM_NONREPARENTING=1
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-
 #set GPG config home
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 
