@@ -15,4 +15,5 @@ input type:keyboard {
 }
 
 input type:pointer {
+  accel_profile flat
 }
