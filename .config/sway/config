@@ -16,4 +16,6 @@ input type:keyboard {
 
 input type:pointer {
   accel_profile flat
+  # Disable while typing
+  dwt enabled
 }
