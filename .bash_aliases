@@ -11,3 +11,4 @@ alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk?' #io monitoring command
 alias please='sudo '
 alias fucking='sudo '
 alias applyconfig='sudo git -C $NIXOS_CONFIG_DIR fetch && sudo git -C $NIXOS_CONFIG_DIR reset --hard $NIXOS_CONFIG_REMOTE/$NIXOS_CONFIG_BRANCH'
+alias ip='ip --color'
