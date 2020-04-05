@@ -9,6 +9,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
+export PATH=$HOME/bin/:$PATH
+
 #set vim as default editor
 export EDITOR=vim
 export SUDO_EDITOR=vim
