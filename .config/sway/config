@@ -1,0 +1,21 @@
+include ../i3/config
+
+# Start graphical session target
+exec systemctl start --user graphical-session.target
+
+# Merge Xresources for Xwayland
+exec xrdb ~/.Xresources
+
+input type:keyboard {
+  xkb_options caps:escape
+  repeat_delay 224
+  repeat_rate 24
+  xkb_layout us
+  xkb_variant altgr-intl
+}
+
+input type:pointer {
+  accel_profile flat
+  # Disable while typing
+  dwt enabled
+}
