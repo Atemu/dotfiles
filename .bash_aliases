@@ -10,5 +10,5 @@ alias sudo='sudo ' #pass aliases to sudo https://askubuntu.com/a/22043/863714
 alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk?' #io monitoring command
 alias please='sudo '
 alias fucking='sudo '
-alias applyconfig='sudo sh -c "cd $NIXOS_CONFIG_DIR && git fetch $NIXOS_CONFIG_REMOTE $NIXOS_CONFIG_BRANCH && git reset --hard $NIXOS_CONFIG_REMOTE/$NIXOS_CONFIG_BRANCH"'
+alias applyconfig='sudo sh -c "cd $NIXOS_CONFIG_DIR && git fetch $NIXOS_CONFIG_REMOTE $NIXOS_CONFIG_BRANCH && git checkout $NIXOS_CONFIG_REMOTE/$NIXOS_CONFIG_BRANCH"'
 alias ip='ip --color'
