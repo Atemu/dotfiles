@@ -43,8 +43,8 @@ This function should only modify configuration layer settings."
      docker
      emacs-lisp
      git
-     helm
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
+     ivy
      (java :variables java-backend 'lsp)
      ;; lsp
      ;; markdown
