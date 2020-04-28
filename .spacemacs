@@ -470,7 +470,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
            (org-level-2 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-3 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-4 :height 1.0 :width normal :weight normal :bold normal)
-           (org-level-5 :height 1.0 :width normal :weight normal :bold normal))))
+           (org-level-5 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-6 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-7 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-8 :height 1.0 :width normal :weight normal :bold normal))))
   )
 
 (defun dotspacemacs/user-load ()
