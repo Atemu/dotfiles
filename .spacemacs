@@ -461,6 +461,16 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; with VC
   (setq custom-file "~/.emacs.d/.cache/.custom-settings")
   (load custom-file)
+
+  ;; Disable Spacemacs' org-mode heading font height adjustment
+  ;; I prefer them to all be the same size
+  (setq theming-modifications
+        '((spacemacs-dark
+           (org-level-1 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-2 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-3 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-4 :height 1.0 :width normal :weight normal :bold normal)
+           (org-level-5 :height 1.0 :width normal :weight normal :bold normal))))
   )
 
 (defun dotspacemacs/user-load ()
@@ -476,13 +486,6 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (setq theming-modifications
-        '((spacemacs-dark
-           (org-level-1 :height 1.0)
-           (org-level-2 :height 1.0)
-           (org-level-3 :height 1.0)
-           (org-level-4 :height 1.0)
-           (org-level-5 :height 1.0))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
