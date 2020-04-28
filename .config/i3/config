@@ -22,6 +22,9 @@ font pango:monospace 8
 # Pixel borders by default
 default_border pixel
 
+# Remove borders where windows touch an edge of a screen
+hide_edge_borders both
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
