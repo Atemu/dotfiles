@@ -37,6 +37,3 @@ fi
 
 #enable vi mode
 set -o vi
-
-#enable thefuck
-which fuck > /dev/null 2>&1 && eval $(thefuck --alias)
