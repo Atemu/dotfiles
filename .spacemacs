@@ -489,6 +489,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
+  (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
