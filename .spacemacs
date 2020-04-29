@@ -44,7 +44,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
-     ivy
+     (ivy :variables ivy-enable-advanced-buffer-information t)
      (java :variables java-backend 'lsp)
      ;; lsp
      ;; markdown
