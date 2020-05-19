@@ -69,7 +69,8 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(atomic-chrome)
+   dotspacemacs-additional-packages '(atomic-chrome
+                                      disk-usage)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -129,7 +130,7 @@ It should only modify the values of Spacemacs settings."
    ;; This is an advanced option and should not be changed unless you suspect
    ;; performance issues due to garbage collection operations.
    ;; (default '(100000000 0.1))
-   dotspacemacs-gc-cons '(100000000 0.1)
+   dotspacemacs-gc-cons '(10000000 0.1)
 
    ;; If non-nil then Spacelpa repository is the primary source to install
    ;; a locked version of packages. If nil then Spacemacs will install the
