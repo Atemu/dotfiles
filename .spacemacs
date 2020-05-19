@@ -499,6 +499,9 @@ before packages are loaded."
 
   ;; Disable auto-fill-mode in git-commit-mode
   (add-hook 'git-commit-setup-hook 'turn-off-auto-fill)
+
+  ;; Make disk-usage show results without --apparent-size
+  (setq disk-usage--du-args "-sB1")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
