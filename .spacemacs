@@ -45,7 +45,6 @@ This function should only modify configuration layer settings."
      git
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (ivy :variables ivy-enable-advanced-buffer-information t)
-     (java :variables java-backend 'lsp)
      ;; lsp
      ;; markdown
      multiple-cursors
