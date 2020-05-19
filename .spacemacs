@@ -491,6 +491,10 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
   (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
+
+  ;; Make Magit open a fullscreen buffer, not a split window
+  ;; https://github.com/magit/magit/issues/1953#issuecomment-221134023
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
