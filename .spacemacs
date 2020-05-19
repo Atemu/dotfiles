@@ -500,6 +500,16 @@ before packages are loaded."
   ;; Disable auto-fill-mode in git-commit-mode
   (add-hook 'git-commit-setup-hook 'turn-off-auto-fill)
 
+  ;; Don't try to record evil macros if the buffer is read-only
+  ;; Adapted from https://emacs.stackexchange.com/a/38364/26492
+  (with-eval-after-load 'evil-maps
+    (define-key evil-normal-state-map (kbd "q")
+      (lambda ()
+        (interactive)
+        (if buffer-read-only
+            (quit-window)
+          (call-interactively 'evil-record-macro)))))
+
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
   )
