@@ -496,6 +496,8 @@ before packages are loaded."
   ;; Make Magit open a fullscreen buffer, not a split window
   ;; https://github.com/magit/magit/issues/1953#issuecomment-221134023
   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+  ;; Fix Magit's horrendous Magit Rev (show commit) performance
+  (setq magit-revision-insert-related-refs nil)
 
   ;; Disable auto-fill-mode in git-commit-mode
   (add-hook 'git-commit-setup-hook 'turn-off-auto-fill)
