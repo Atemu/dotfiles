@@ -73,6 +73,7 @@ This function should only modify configuration layer settings."
                                       disk-usage)
 
    ;; A list of packages that cannot be updated.
+   ;; Currently no effect
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
@@ -490,6 +491,16 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; Don't try to update external packages
+  ;; FIXME Don't override, append/prepend
+  (setq dotspacemacs-frozen-packages
+        (seq-filter
+         (lambda (pkg)
+           (string=
+            (package-desc-status (cadr (assq pkg package-alist)))
+            "external"))
+         package-activated-list))
+
   ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
   (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
 
