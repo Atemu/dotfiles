@@ -526,6 +526,14 @@ before packages are loaded."
             (quit-window)
           (call-interactively 'evil-record-macro)))))
 
+  ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
+  (nconc jka-compr-compression-info-list
+         '(["\\.mozlz4\\'"
+            "mozlz4 compressing"   "mozlz4a"         ("/dev/stdin" "/dev/stdout")
+            "mozlz4 uncompressing" "mozlz4a"         ("/dev/stdin" "/dev/stdout" "-d")
+            nil nil "mozLz40"]))
+  (jka-compr-update)
+
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
   )
