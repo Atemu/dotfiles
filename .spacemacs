@@ -528,7 +528,7 @@ before packages are loaded."
 
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
-         '(["\\.mozlz4\\'"
+         '(["\\.\\(?:mozlz4\\|json\\.lz4\\|jsonlz4\\)\\'"
             "mozlz4 compressing"   "mozlz4a"         ("/dev/stdin" "/dev/stdout")
             "mozlz4 uncompressing" "mozlz4a"         ("/dev/stdin" "/dev/stdout" "-d")
             nil nil "mozLz40"]))
