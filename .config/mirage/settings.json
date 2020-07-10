@@ -8,7 +8,7 @@
     "collapseSidePanesUnderWindowWidth": 450,
     "compactMode": false,
     "enableKineticScrolling": true,
-    "hideMembershipEvents": false,
+    "hideMembershipEvents": true,
     "hideProfileChangeEvents": true,
     "hideUnknownEvents": true,
     "keys": {
