@@ -43,6 +43,7 @@ This function should only modify configuration layer settings."
      docker
      emacs-lisp
      git
+     haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (ivy :variables ivy-enable-advanced-buffer-information t)
      latex
