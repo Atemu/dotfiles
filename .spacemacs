@@ -506,6 +506,12 @@ before packages are loaded."
   ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
   (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
 
+  ;; Set default projectile switch project action to open magit
+  (with-eval-after-load 'counsel-projectile
+    (counsel-projectile-modify-action
+     'counsel-projectile-switch-project-action
+     '((default counsel-projectile-switch-project-action-vc))))
+
   ;; Make Magit open a fullscreen buffer, not a split window
   ;; https://github.com/magit/magit/issues/1953#issuecomment-221134023
   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
