@@ -515,6 +515,9 @@ before packages are loaded."
      'counsel-projectile-switch-project-action
      '((default counsel-projectile-switch-project-action-vc))))
 
+  ;; Re-center the screen when switching swiper results
+  (setq swiper-action-recenter t)
+
   ;; Make Magit open a fullscreen buffer, not a split window
   ;; https://github.com/magit/magit/issues/1953#issuecomment-221134023
   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
