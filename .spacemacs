@@ -505,6 +505,9 @@ before packages are loaded."
 
   ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
   (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
+  ;; Don't show extra dirs (you can go up one dir using C-l and use the current
+  ;; completion (without current selection) using C-M-j)
+  (setq ivy-extra-directories nil)
 
   ;; Set default projectile switch project action to open magit
   (with-eval-after-load 'counsel-projectile
