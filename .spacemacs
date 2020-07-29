@@ -61,7 +61,7 @@ This function should only modify configuration layer settings."
      ;; syntax-checking
      theming
      treemacs
-     ;; version-control
+     (version-control :variables version-control-diff-tool 'git-gutter)
      )
 
    ;; List of additional packages that will be installed without being
