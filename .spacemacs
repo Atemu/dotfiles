@@ -466,6 +466,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq custom-file "~/.emacs.d/.cache/.custom-settings")
   (load custom-file)
 
+  ;; Show diff in left fringe
+  (setq version-control-diff-side 'left)
+
   ;; Disable Spacemacs' org-mode heading font height adjustment
   ;; I prefer them to all be the same size
   (setq theming-modifications
