@@ -528,7 +528,8 @@ before packages are loaded."
   (setq magit-revision-insert-related-refs nil)
   ;; Exit transient buffers with ESC
   (with-eval-after-load 'magit
-    (define-key transient-base-map (kbd "<escape>") 'transient-quit-one))
+    (define-key transient-base-map (kbd "<escape>") 'transient-quit-one)
+    (setq magit-status-headers-hook (delete 'magit-insert-tags-header magit-status-headers-hook)))
 
   ;; Disable auto-fill-mode in git-commit-mode
   (add-hook 'git-commit-setup-hook 'turn-off-auto-fill)
