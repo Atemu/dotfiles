@@ -602,6 +602,9 @@ before packages are loaded."
         turn-on-adaptive-wrap-prefix-mode)
       (global-adaptive-wrap-prefix-mode 1)))
 
+  ;; Wrap on words, not characters
+  (setq word-wrap t)
+
   ;; Collect garbage interactively
   (spacemacs/set-leader-keys "\\" 'garbage-collect)
   ;; Collect garbage when focus is lost
