@@ -555,6 +555,21 @@ before packages are loaded."
 
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
+
+  ;; Enable adaptive-wrap globally
+  ;; Taken from https://github.com/kaushalmodi/.emacs.d/blob/2015b51b2e0129e0af0d0efbb716b18f38038524/setup-files/setup-visual.el#L202-L218
+  (use-package adaptive-wrap
+    :config
+    (progn
+      (setq-default adaptive-wrap-extra-indent 2)
+      (defun turn-on-adaptive-wrap-prefix-mode ()
+        "Turns on adaptive-wrap-prefix-mode."
+        (interactive)
+        (adaptive-wrap-prefix-mode 1))
+      (define-globalized-minor-mode global-adaptive-wrap-prefix-mode
+        adaptive-wrap-prefix-mode
+        turn-on-adaptive-wrap-prefix-mode)
+      (global-adaptive-wrap-prefix-mode 1)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
