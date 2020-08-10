@@ -1,1 +1,3 @@
 scrollbar_mode = none
+
+mod_meta_mode=esc #It tries to enter special characters with M- by default
