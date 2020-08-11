@@ -560,6 +560,10 @@ before packages are loaded."
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
 
+  ;; Wombat theme customisation
+  ;; Set hl-line color to something other than the selection color
+  (set-face-background hl-line-face "gray13")
+
   ;; Enable adaptive-wrap globally
   ;; Taken from https://github.com/kaushalmodi/.emacs.d/blob/2015b51b2e0129e0af0d0efbb716b18f38038524/setup-files/setup-visual.el#L202-L218
   (use-package adaptive-wrap
