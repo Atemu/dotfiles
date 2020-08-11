@@ -563,6 +563,8 @@ before packages are loaded."
   ;; Wombat theme customisation
   ;; Set hl-line color to something other than the selection color
   (set-face-background hl-line-face "gray13")
+  ;; Do not add an underline or any other funky business
+  (set-face-attribute 'hl-line nil :inherit nil)
 
   ;; Enable adaptive-wrap globally
   ;; Taken from https://github.com/kaushalmodi/.emacs.d/blob/2015b51b2e0129e0af0d0efbb716b18f38038524/setup-files/setup-visual.el#L202-L218
