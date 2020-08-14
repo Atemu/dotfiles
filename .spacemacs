@@ -541,16 +541,21 @@ before packages are loaded."
   ;; Re-center the screen when switching swiper results
   (setq swiper-action-recenter t)
 
-  ;; Make Magit open its buffer in the current window but use an existins split for diffs
-  (setq magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
-  ;; Fix Magit's horrendous Magit Rev (show commit) performance
-  (setq magit-revision-insert-related-refs nil)
-  ;; Exit transient buffers with ESC
   (with-eval-after-load 'magit
+    ;; Exit transient buffers with ESC
     (define-key transient-base-map (kbd "<escape>") 'transient-quit-one)
-    (setq magit-status-headers-hook (delete 'magit-insert-tags-header magit-status-headers-hook)
-          ;; customise default flags for transient actions
-          transient-values '((magit-merge "--no-ff"))))
+
+    (setq
+     ;; Make Magit open its buffer in the current window but use an existins split for diffs
+     magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1
+
+     ;; Fix Magit's horrendous Magit Rev (show commit) performance
+     magit-revision-insert-related-refs nil
+     ;; Don't show status headers (takes >2s in Nixpkgs)
+     magit-status-headers-hook (delete 'magit-insert-tags-header magit-status-headers-hook)
+
+     ;; customise default flags for transient actions
+     transient-values '((magit-merge "--no-ff"))))
 
   ;; Disable auto-fill-mode in git-commit-mode
   (with-eval-after-load 'git-commit
