@@ -591,6 +591,8 @@ before packages are loaded."
   ;; Open urxvt with terminal-here
   (setq terminal-here-terminal-command (list "bash" "-c" "mlterm"))
 
+  (atomic-chrome-start-server)
+
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
 
