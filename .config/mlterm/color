@@ -1,0 +1,32 @@
+# Black
+0 = #000000
+8 = #313131
+
+# Red
+1 = #ff615a
+9 = #f58c80
+
+#Green
+
+2 = #b1e969
+10 = #ddf88f
+
+# Yellow
+3 = #ebd99c
+11 = #eee5b2
+
+# Blue
+4 = #5da9f6
+12 = #a5c7ff
+
+# Magenta
+5 = #e86aff
+13 = #ddaaff
+
+# Cyan
+6 = #82fff7
+14 = #b7fff9
+
+# White
+7 = #dedacf
+15 = #ffffff
