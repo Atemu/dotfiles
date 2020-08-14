@@ -554,7 +554,7 @@ before packages are loaded."
   (jka-compr-update)
 
   ;; Open urxvt with terminal-here
-  (setq terminal-here-terminal-command (list "bash" "-c" "$TERMINAL"))
+  (setq terminal-here-terminal-command (list "bash" "-c" "mlterm"))
 
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
