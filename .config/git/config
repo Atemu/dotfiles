@@ -1,6 +1,10 @@
 [user]
 	email = atemu.main@gmail.com
 	name = Atemu
+
+[includeIf "gitdir/i:~/work/"]
+	path = ~/work/.gitconfig
+
 [merge]
 	tool = vimdiff
 [advice]
