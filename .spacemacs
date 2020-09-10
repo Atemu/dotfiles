@@ -559,7 +559,16 @@ before packages are loaded."
          '(["\\.\\(?:mozlz4\\|json\\.lz4\\|jsonlz4\\)\\'"
             "mozlz4 compressing"   "mozlz4a"         ("/dev/stdin" "/dev/stdout")
             "mozlz4 uncompressing" "mozlz4a"         ("/dev/stdin" "/dev/stdout" "-d")
-            nil nil "mozLz40"]))
+            nil nil "mozLz40"])
+         ;; Allow editing of binary .plist files.
+         '(["\\.plist$"
+            "converting text XML to binary plist"
+            "plutil"
+            ("-convert" "binary1" "-o" "-" "-")
+            "converting binary plist to text XML"
+            "plutil"
+            ("-convert" "xml1" "-o" "-" "-")
+            nil nil "bplist"]))
   (jka-compr-update)
 
   ;; Open urxvt with terminal-here
