@@ -591,6 +591,9 @@ before packages are loaded."
         adaptive-wrap-prefix-mode
         turn-on-adaptive-wrap-prefix-mode)
       (global-adaptive-wrap-prefix-mode 1)))
+
+  ;; Right option gets interpreted as M- by default
+  (setq mac-right-option-modifier "none")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
