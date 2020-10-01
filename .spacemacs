@@ -482,7 +482,14 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
            (org-level-5 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-6 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-7 :height 1.0 :width normal :weight normal :bold normal)
-           (org-level-8 :height 1.0 :width normal :weight normal :bold normal))))
+           (org-level-8 :height 1.0 :width normal :weight normal :bold normal))
+           (wombat
+            ;; Set hl-line color to something other than the selection color
+            (hl-line-face "gray13")
+            ;; Do not add an underline or any other funky business
+            (hl-line nil :inherit nil)
+            ;; Tone down magit diff context background a bit
+            (magit-diff-context-highlight nil :background "grey15"))))
   )
 
 (defun dotspacemacs/user-load ()
@@ -559,15 +566,6 @@ before packages are loaded."
 
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
-
-  ;; Wombat theme customisation
-  ;; Set hl-line color to something other than the selection color
-  (set-face-background hl-line-face "gray13")
-  ;; Do not add an underline or any other funky business
-  (set-face-attribute 'hl-line nil :inherit nil)
-  ;; Tone down magit diff context background a bit
-  (with-eval-after-load 'magit
-    (set-face-attribute 'magit-diff-context-highlight nil :background "grey15"))
 
   ;; Enable adaptive-wrap globally
   ;; Taken from https://github.com/kaushalmodi/.emacs.d/blob/2015b51b2e0129e0af0d0efbb716b18f38038524/setup-files/setup-visual.el#L202-L218
