@@ -484,10 +484,11 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
            (org-level-7 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-8 :height 1.0 :width normal :weight normal :bold normal))
            (wombat
-            ;; Set hl-line color to something other than the selection color
-            (hl-line-face "gray13")
-            ;; Do not add an underline or any other funky business
-            (hl-line nil :inherit nil)
+            (hl-line
+             ;; Set color to something other than the selection color
+             :background "gray13"
+             ;; Do not underline
+             :underline nil)
             ;; Tone down magit diff context background a bit
             (magit-diff-context-highlight nil :background "grey15"))))
   )
