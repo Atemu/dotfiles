@@ -1,3 +1,4 @@
 *.mozlz4 binary diff=mozlz4
 *.json.lz4 binary diff=mozlz4
 *.jsonlz4 binary diff=mozlz4
+*.plist binary diff=plist
