@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
      org
      pdf
      python
+     ranger
      (shell :variables shell-default-shell 'vterm)
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
