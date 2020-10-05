@@ -74,7 +74,8 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(atomic-chrome
                                       adaptive-wrap
-                                      disk-usage)
+                                      disk-usage
+                                      (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali")))
 
    ;; A list of packages that cannot be updated.
    ;; Currently no effect
