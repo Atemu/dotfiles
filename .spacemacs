@@ -136,7 +136,8 @@ It should only modify the values of Spacemacs settings."
    ;; This is an advanced option and should not be changed unless you suspect
    ;; performance issues due to garbage collection operations.
    ;; (default '(100000000 0.1))
-   dotspacemacs-gc-cons '(10000000 0.1)
+   ;; 8GiB, effectively disables GC
+   dotspacemacs-gc-cons '((* 8 (expt 2 30)) 0.1)
 
    ;; If non-nil then Spacelpa repository is the primary source to install
    ;; a locked version of packages. If nil then Spacemacs will install the
