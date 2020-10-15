@@ -593,6 +593,9 @@ before packages are loaded."
         turn-on-adaptive-wrap-prefix-mode)
       (global-adaptive-wrap-prefix-mode 1)))
 
+  ;; Collect garbage interactively
+  (spacemacs/set-leader-keys "\\" 'garbage-collect)
+
   ;; Right option gets interpreted as M- by default
   (setq mac-right-option-modifier "none")
   )
