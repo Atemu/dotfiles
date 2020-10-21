@@ -493,6 +493,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
              :background "gray13"
              ;; Do not underline
              :underline nil))))
+
+  ;; Let Emacs use all the CPUs it could need to compile native packages
+  (setq comp-num-cpus 12)
   )
 
 (defun dotspacemacs/user-load ()
