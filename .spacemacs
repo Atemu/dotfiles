@@ -595,6 +595,9 @@ before packages are loaded."
 
   ;; Collect garbage interactively
   (spacemacs/set-leader-keys "\\" 'garbage-collect)
+  ;; Collect garbage when focus is lost
+  ;; https://www.reddit.com/r/emacs/comments/4j828f/til_setq_gcconsthreshold_100000000/d355on6/
+  (add-hook 'focus-out-hook 'garbage-collect)
 
   ;; Right option gets interpreted as M- by default
   (setq mac-right-option-modifier "none")
