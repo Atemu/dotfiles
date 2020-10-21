@@ -536,9 +536,8 @@ before packages are loaded."
   ;; Re-center the screen when switching swiper results
   (setq swiper-action-recenter t)
 
-  ;; Make Magit open a fullscreen buffer, not a split window
-  ;; https://github.com/magit/magit/issues/1953#issuecomment-221134023
-  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+  ;; Make Magit open its buffer in the current window but use an existins split for diffs
+  (setq magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
   ;; Fix Magit's horrendous Magit Rev (show commit) performance
   (setq magit-revision-insert-related-refs nil)
   ;; Exit transient buffers with ESC
