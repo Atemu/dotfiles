@@ -74,6 +74,7 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(atomic-chrome
                                       adaptive-wrap
+                                      bash-completion
                                       disk-usage
                                       (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
                                       (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
@@ -605,6 +606,9 @@ before packages are loaded."
 
   ;; Right option gets interpreted as M- by default
   (setq mac-right-option-modifier "none")
+
+  (require 'bash-completion)
+  (bash-completion-setup)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
