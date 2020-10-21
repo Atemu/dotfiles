@@ -75,7 +75,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(atomic-chrome
                                       adaptive-wrap
                                       disk-usage
-                                      (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali")))
+                                      (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
+                                      (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
 
    ;; A list of packages that cannot be updated.
    ;; Currently no effect
