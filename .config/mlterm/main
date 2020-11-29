@@ -6,3 +6,4 @@ regard_uri_as_word = true
 
 bg_color = #171717
 fg_color = #dedacf
+logsize = unlimited
