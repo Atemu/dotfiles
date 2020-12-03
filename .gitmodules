@@ -1,0 +1,3 @@
+[submodule "Anime4K"]
+	path = .config/mpv/shaders/Anime4K
+	url = https://github.com/bloc97/Anime4K
