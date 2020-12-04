@@ -47,6 +47,7 @@ This function should only modify configuration layer settings."
      haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (ivy :variables ivy-enable-advanced-buffer-information t)
+     kotlin
      latex
      ;; lsp
      ;; markdown
