@@ -504,8 +504,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
              :underline nil))))
 
   ;; Let Emacs use all the CPUs it could need to compile native packages
-  (setq comp-num-cpus 12)
-  )
+  (setq comp-num-cpus 12
+        warning-suppress-types '((comp))))
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
