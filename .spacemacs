@@ -51,7 +51,7 @@ This function should only modify configuration layer settings."
      kotlin
      latex
      ;; lsp
-     ;; markdown
+     markdown
      multiple-cursors
      nixos
      org
