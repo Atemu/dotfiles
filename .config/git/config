@@ -15,3 +15,6 @@
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
 	binary = true
+
+[annex]
+	genmetadata = true
