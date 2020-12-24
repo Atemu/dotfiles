@@ -11,7 +11,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 export PATH=$HOME/bin/:$PATH
 
-export EDITOR=emacsclient
+export EDITOR="emacsclient -t"
 export SUDO_EDITOR=$EDITOR
 
 #set GPG config home
