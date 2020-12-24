@@ -32,8 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(rust
-     ;; ----------------------------------------------------------------
+   '(;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
@@ -58,6 +57,7 @@ This function should only modify configuration layer settings."
      pdf
      python
      ranger
+     rust
      (shell :variables shell-default-shell 'shell
             shell-default-term-shell "~/.nix-profile/bin/bash")
      ;;        shell-default-height 30
