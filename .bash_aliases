@@ -15,4 +15,5 @@ alias applyconfig='sudo sh -c "cd $NIXOS_CONFIG_DIR && git fetch $NIXOS_CONFIG_R
 alias ip='ip --color'
 alias e='$EDITOR'
 alias et='$EDITOR -t'
+alias nixpkgs-update='sudo git -C /nix/var/nix/nixpkgs reset --hard $NIXPKGS_REF'
 alias nix-stray-roots='nix-store --gc --print-roots | egrep -v "^(/nix/var|/run/\w+-system|\{memory|\{censored|/proc/maps/)"'

@@ -26,3 +26,5 @@ export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 # Set default remote and branch for nixos-config
 export NIXOS_CONFIG_REMOTE=origin
 export NIXOS_CONFIG_BRANCH=master
+
+export NIXPKGS_REF=master
