@@ -23,8 +23,6 @@ export LIBVIRT_DEFAULT_URI="qemu:///system"
 # needed for user channels to appear in NIX_PATH on non-NixOS Nix installations
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 
-# Set default remote and branch for nixos-config
-export NIXOS_CONFIG_REMOTE=origin
-export NIXOS_CONFIG_BRANCH=master
-
+# Used by {nixos,nixpkgs}-update aliases
+export NIXOS_REF=master
 export NIXPKGS_REF=master
