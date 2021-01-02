@@ -2,6 +2,12 @@
 # ~/.bashrc
 #
 
+# Copied from Nix-generated /etc/bashrc
+# Needs to happen *before* the interactivity check
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
