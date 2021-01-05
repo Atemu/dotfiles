@@ -528,6 +528,9 @@ before packages are loaded."
             "external"))
          package-activated-list))
 
+  ;; Don't pollute working dir with LockFiles
+  (setq create-lockfiles nil)
+
   ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
   (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
   ;; Don't show extra dirs (you can go up one dir using C-l and use the current
