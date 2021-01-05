@@ -82,6 +82,8 @@ This function should only modify configuration layer settings."
                                       adaptive-wrap
                                       bash-completion
                                       disk-usage
+                                      git-annex
+                                      magit-annex
                                       (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
                                       (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
 
