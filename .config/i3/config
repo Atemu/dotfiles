@@ -163,6 +163,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-msg exit"
 
+# suspend the system
+bindsym $mod+Shift+s exec sleep 1 && systemctl suspend
+
 # lock the screen
 bindsym $mod+Escape exec "physlock"
 
