@@ -561,6 +561,9 @@ before packages are loaded."
      ;; Don't show status headers (takes >2s in Nixpkgs)
      magit-status-headers-hook (delete 'magit-insert-tags-header magit-status-headers-hook)
 
+     ;; Show time since commit in the left in magit-status
+     magit-status-margin '(t age magit-log-margin-width nil 18)
+
      ;; customise default flags for transient actions
      transient-values '((magit-merge "--no-ff")
                         (magit-annex-sync "--content"))))
