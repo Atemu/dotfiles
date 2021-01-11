@@ -562,7 +562,8 @@ before packages are loaded."
      magit-status-headers-hook (delete 'magit-insert-tags-header magit-status-headers-hook)
 
      ;; customise default flags for transient actions
-     transient-values '((magit-merge "--no-ff"))))
+     transient-values '((magit-merge "--no-ff")
+                        (magit-annex-sync "--content"))))
 
   ;; Disable auto-fill-mode in git-commit-mode
   (with-eval-after-load 'git-commit
