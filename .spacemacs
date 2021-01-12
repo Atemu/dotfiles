@@ -240,7 +240,8 @@ It should only modify the values of Spacemacs settings."
 
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
    ;; (default "SPC")
-   dotspacemacs-emacs-command-key "SPC"
+   ;; Overridden with ivy-switch-buffer
+   dotspacemacs-emacs-command-key ""
 
    ;; The key used for Vim Ex commands (default ":")
    dotspacemacs-ex-command-key ":"
@@ -624,6 +625,9 @@ before packages are loaded."
 
   ;; Wrap on words, not characters
   (setq word-wrap t)
+
+  ;; Switch buffers with SPC SPC
+  (spacemacs/set-leader-keys "SPC" 'ivy-switch-buffer)
 
   ;; Collect garbage interactively
   (spacemacs/set-leader-keys "\\" 'garbage-collect)
