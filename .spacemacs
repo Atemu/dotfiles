@@ -521,6 +521,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; Don't use annoying GUI dialog boxes
+  (setq use-dialog-box nil)
+
   ;; Don't try to update external packages
   ;; FIXME Don't override, append/prepend
   (setq dotspacemacs-frozen-packages
