@@ -623,8 +623,8 @@ before packages are loaded."
         turn-on-adaptive-wrap-prefix-mode)
       (global-adaptive-wrap-prefix-mode 1)))
 
-  ;; Wrap on words, not characters
-  (setq word-wrap t)
+  ;; Truncate lines with words-wrap
+  (global-visual-line-mode)
 
   ;; Switch buffers with SPC SPC
   (spacemacs/set-leader-keys "SPC" 'ivy-switch-buffer)
