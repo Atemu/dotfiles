@@ -629,6 +629,8 @@ before packages are loaded."
   (defun custom-text-mode-hook ()
     (visual-fill-column-mode))
   (add-hook 'text-mode-hook #'custom-text-mode-hook)
+  ;; Set fill-column to 120, we'e not in the 80's anymore
+  (setq-default fill-column 120)
 
   ;; Switch buffers with SPC SPC
   (spacemacs/set-leader-keys "SPC" 'ivy-switch-buffer)
