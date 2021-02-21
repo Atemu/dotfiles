@@ -613,7 +613,6 @@ before packages are loaded."
   (use-package adaptive-wrap
     :config
     (progn
-      (setq-default adaptive-wrap-extra-indent 2)
       (defun turn-on-adaptive-wrap-prefix-mode ()
         "Turns on adaptive-wrap-prefix-mode."
         (interactive)
@@ -631,6 +630,11 @@ before packages are loaded."
   (add-hook 'text-mode-hook #'custom-text-mode-hook)
   ;; Set fill-column to 120, we'e not in the 80's anymore
   (setq-default fill-column 120)
+
+  ;; Add extra indent to wrapped lines in prog-modes
+  (defun custom-prog-mode-hook ()
+    (setq adaptive-wrap-extra-indent 2))
+  (add-hook 'prog-mode-hook #'custom-prog-mode-hook)
 
   ;; Switch buffers with SPC SPC
   (spacemacs/set-leader-keys "SPC" 'ivy-switch-buffer)
