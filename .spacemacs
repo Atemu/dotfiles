@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      ;; auto-completion
      ;; better-defaults
      c-c++
+     debug
      docker
      emacs-lisp
      git
