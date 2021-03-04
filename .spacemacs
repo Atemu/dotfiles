@@ -650,6 +650,8 @@ before packages are loaded."
 
   (require 'bash-completion)
   (bash-completion-setup)
+
+  (setq org-todo-keywords '((sequence "TODO" "|" "DONE" "ABRT")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
