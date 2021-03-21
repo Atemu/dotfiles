@@ -574,9 +574,9 @@ before packages are loaded."
      transient-values '((magit-merge "--no-ff")
                         (magit-annex-sync "--content"))))
 
-  ;; Disable auto-fill-mode in git-commit-mode
   (with-eval-after-load 'git-commit
-    (remove-hook 'git-commit-setup-hook 'git-commit-turn-on-auto-fill))
+    ;; Disable auto-fill-mode in git-commit-mode
+    (remove-hook 'git-commit-setup-hook #'git-commit-turn-on-auto-fill))
 
   ;; Don't try to record evil macros if the buffer is read-only
   ;; Adapted from https://emacs.stackexchange.com/a/38364/26492
