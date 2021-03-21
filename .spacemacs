@@ -657,6 +657,14 @@ before packages are loaded."
   (bash-completion-setup)
 
   (setq org-todo-keywords '((sequence "TODO" "|" "DONE" "ABRT")))
+
+  ;; Put LaTeX tmp files into /tmp/ instead of working dir
+  ;; https://tex.stackexchange.com/a/111965
+  (add-hook 'LaTeX-mode-hook (lambda ()
+                              (push
+                               '("Latex_outdir" "%`pdflatex --output-directory=/tmp %(mode)%' %t" TeX-run-TeX nil (latex-mode doctex-mode) :help "Run pdflatex with output in /tmp")
+                               TeX-command-list)))
+  (setq latex-build-command "Latex_outdir")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
