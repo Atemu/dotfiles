@@ -576,7 +576,11 @@ before packages are loaded."
 
   (with-eval-after-load 'git-commit
     ;; Disable auto-fill-mode in git-commit-mode
-    (remove-hook 'git-commit-setup-hook #'git-commit-turn-on-auto-fill))
+    (remove-hook 'git-commit-setup-hook #'git-commit-turn-on-auto-fill)
+    (defun my/git-commit-hook ()
+      ;; My global fill-column is higher but git commits should really only have 80 chars
+      (setq fill-column 80))
+    (add-hook 'git-commit-setup-hook #'my/git-commit-hook))
 
   ;; Don't try to record evil macros if the buffer is read-only
   ;; Adapted from https://emacs.stackexchange.com/a/38364/26492
