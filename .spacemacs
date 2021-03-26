@@ -48,9 +48,12 @@ This function should only modify configuration layer settings."
      haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (ivy :variables ivy-enable-advanced-buffer-information t)
+     (javascript :variables
+                 javascript-backend 'tide
+                 typescript-backend 'tide)
      kotlin
      latex
-     ;; lsp
+     lsp
      markdown
      multiple-cursors
      nixos
