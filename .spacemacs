@@ -65,6 +65,8 @@ This function should only modify configuration layer settings."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
+     (solidity :variables
+               solidity-flycheck-solc-checker-active t)
      systemd
      theming
      treemacs
