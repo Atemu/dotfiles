@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
      groovy
      haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
-     (ivy :variables ivy-enable-advanced-buffer-information t)
+     (ivy)
      (javascript :variables
                  javascript-backend 'tide
                  typescript-backend 'tide)
