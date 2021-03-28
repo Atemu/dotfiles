@@ -236,10 +236,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; Default font or prioritized list of fonts.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 14
-                               :weight normal
-                               :width normal)
+   dotspacemacs-default-font (if (string-equal system-type "darwin")
+                                 '("Monaco" :size 14) '("Source Code Pro" :size 14))
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
