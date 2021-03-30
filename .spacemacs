@@ -606,7 +606,7 @@ before packages are loaded."
             nil nil "bplist"]))
   (jka-compr-update)
 
-  ;; Open urxvt with terminal-here
+  ;; Open mlterm with terminal-here
   (setq terminal-here-terminal-command (list "bash" "-c" "mlterm"))
 
   (atomic-chrome-start-server)
