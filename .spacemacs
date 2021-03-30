@@ -69,7 +69,7 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      ;; syntax-checking
      (solidity :variables
-               solidity-flycheck-solc-checker-active t)
+               solidity-flycheck-solc-checker-active nil)
      systemd
      theming
      treemacs
