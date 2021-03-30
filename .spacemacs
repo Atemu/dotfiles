@@ -647,8 +647,8 @@ before packages are loaded."
   (defun custom-text-mode-hook ()
     (visual-fill-column-mode))
   (add-hook 'text-mode-hook #'custom-text-mode-hook)
-  ;; Set fill-column to 120, we'e not in the 80's anymore
-  (setq-default fill-column 120)
+  ;; We'e not in the 80's anymore
+  (setq-default visual-fill-column-width 120)
 
   ;; Add extra indent to wrapped lines in prog-modes
   (defun custom-prog-mode-hook ()
