@@ -14,9 +14,6 @@ export PATH=$HOME/bin/:$PATH
 export EDITOR="emacsclient -t"
 export SUDO_EDITOR=$EDITOR
 
-#set GPG config home
-export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
-
 #libvirt connect to system by default
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
