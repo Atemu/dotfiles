@@ -242,11 +242,6 @@ It should only modify the values of Spacemacs settings."
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
 
-   ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
-   ;; (default "SPC")
-   ;; Overridden with ivy-switch-buffer
-   dotspacemacs-emacs-command-key ""
-
    ;; The key used for Vim Ex commands (default ":")
    dotspacemacs-ex-command-key ":"
 
