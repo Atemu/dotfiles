@@ -630,6 +630,8 @@ before packages are loaded."
 
   ;; Truncate lines with words-wrap
   (global-visual-line-mode)
+  ;; Make adaptive-wrap-extra-indent buffer-local again
+  (make-variable-buffer-local 'adaptive-wrap-extra-indent)
   ;; Enable visual-fill-column-mode in text-modes
   (defun custom-text-mode-hook ()
     (visual-fill-column-mode))
