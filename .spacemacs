@@ -90,6 +90,7 @@ This function should only modify configuration layer settings."
                                       disk-usage
                                       git-annex
                                       magit-annex
+                                      (ligature :location (recipe :fetcher github :repo "mickeynp/ligature.el"))
                                       (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
                                       (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
 
@@ -668,6 +669,16 @@ before packages are loaded."
                                '("Latex_outdir" "%`pdflatex --output-directory=/tmp %(mode)%' %t" TeX-run-TeX nil (latex-mode doctex-mode) :help "Run pdflatex with output in /tmp")
                                TeX-command-list)))
   (setq latex-build-command "Latex_outdir")
+
+  ;; Enable ligatures
+  (require 'ligature)
+  (global-ligature-mode t)
+  ;; Currently supported ligatures in hasklig
+  (ligature-set-ligatures 'prog-mode '("<*" "<*>" "<+>" "<$>" "***" "<|" "|>"
+                                       "<|>" "!!" "||" "===" "==>" "<<<" ">>>"
+                                       "<>" "+++" "<-" "->" "=>" ">>" "<<" ">>="
+                                       "=<<" ".." "..." "::" "-<" ">-" "-<<"
+                                       ">>-" "++" "/=" "=="))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
