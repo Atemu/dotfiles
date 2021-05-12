@@ -674,7 +674,7 @@ before packages are loaded."
   (require 'ligature)
   (global-ligature-mode t)
   ;; Currently supported ligatures in hasklig
-  (ligature-set-ligatures 'prog-mode '("<*" "<*>" "<+>" "<$>" "***" "<|" "|>"
+  (ligature-set-ligatures 'text-mode '("<*" "<*>" "<+>" "<$>" "***" "<|" "|>"
                                        "<|>" "!!" "||" "===" "==>" "<<<" ">>>"
                                        "<>" "+++" "<-" "->" "=>" ">>" "<<" ">>="
                                        "=<<" ".." "..." "::" "-<" ">-" "-<<"
