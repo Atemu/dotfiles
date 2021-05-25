@@ -12,9 +12,6 @@
 [diff "mozlz4"]
 	textconv = mozlz4a -d /dev/stdin /dev/stdout <
 	binary = true
-[diff "jq"]
-	textconv = jq .
-	binary = false
 
 [annex]
 	genmetadata = true
