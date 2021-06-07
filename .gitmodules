@@ -2,5 +2,5 @@
 	path = .config/mpv/shaders/Anime4K
 	url = https://github.com/bloc97/Anime4K
 [submodule "ff2mpv"]
-	path = bin/ff2mpv
+	path = .local/bin/ff2mpv
 	url = https://github.com/woodruffw/ff2mpv
