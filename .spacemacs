@@ -587,6 +587,9 @@ before packages are loaded."
             (quit-window)
           (call-interactively 'evil-record-macro)))))
 
+  ;; Use nixpkgs-fmt for formatting nix buffers
+  (setq nix-nixfmt-bin "nixpkgs-fmt")
+
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
          '(["\\.\\(?:mozlz4\\|json\\.lz4\\|jsonlz4\\)\\'"
