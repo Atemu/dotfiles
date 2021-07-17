@@ -85,6 +85,7 @@ This function should only modify configuration layer settings."
                                       adaptive-wrap
                                       bash-completion
                                       disk-usage
+                                      gcmh
                                       git-annex
                                       magit-annex
                                       (ligature :location (recipe :fetcher github :repo "mickeynp/ligature.el"))
@@ -537,6 +538,10 @@ before packages are loaded."
 
   ;; Don't pollute working dir with LockFiles
   (setq create-lockfiles nil)
+
+  ;; Enable Garbage Collector Magic Hack
+  (gcmh-mode 1)
+  (setq gcmh-idle-delay 10)
 
   ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
   (define-key ivy-minibuffer-map (kbd "C-l") 'counsel-up-directory)
