@@ -11,3 +11,4 @@ ot_features = clig,dlig,hlig,liga
 use_ot_layout = true
 use_anti_alias = true
 type_engine = cairo
+static_backscroll_mode = true
