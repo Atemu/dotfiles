@@ -649,7 +649,11 @@ before packages are loaded."
   (add-hook 'focus-out-hook 'garbage-collect)
 
   ;; Right option gets interpreted as M- by default
-  (setq mac-right-option-modifier "none")
+  (setq mac-right-option-modifier "none"
+        ;; MacPort turns the meta key into macOS' weird special character "option" key by default. No to that.
+        mac-option-modifier '(:ordinary meta :function meta :mouse meta)
+        ;; Default on macPort, just disables control? Why would you want that?
+        mac-pass-control-to-system nil)
 
   (require 'bash-completion)
   (bash-completion-setup)
