@@ -88,6 +88,7 @@ This function should only modify configuration layer settings."
                                       gcmh
                                       git-annex
                                       magit-annex
+                                      mpv
                                       (ligature :location (recipe :fetcher github :repo "mickeynp/ligature.el"))
                                       (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
                                       (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
