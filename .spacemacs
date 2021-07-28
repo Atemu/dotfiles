@@ -667,6 +667,13 @@ before packages are loaded."
         mac-option-modifier '(:ordinary meta :function meta :mouse meta)
         ;; Default on macPort, just disables control? Why would you want that?
         mac-pass-control-to-system nil)
+  ;; When disabled (default in spacemacs), emacsMacport goes to the background
+  ;; when defocusing it by switching space or using mission control.
+  ;; NS Emacs doesn't have this issue but "showing" the menu bar doesn't hurt
+  ;; since it's the mac one that will be shown anyways.
+  (when (string-equal system-type "darwin")
+    (menu-bar-mode 1))
+
 
   (require 'bash-completion)
   (bash-completion-setup)
