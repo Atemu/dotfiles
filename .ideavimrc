@@ -1,0 +1,2 @@
+" Use system clipboard
+set clipboard+=unnamed
