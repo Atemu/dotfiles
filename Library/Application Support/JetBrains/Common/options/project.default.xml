@@ -3,6 +3,7 @@
     <defaultProject>
       <component name="ProjectLevelVcsManager">
         <ConfirmationsSetting value="1" id="Add" />
+        <ConfirmationsSetting value="1" id="Remove" />
       </component>
       <component name="PropertiesComponent">
         <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
