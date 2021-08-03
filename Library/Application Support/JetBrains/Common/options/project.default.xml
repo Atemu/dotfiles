@@ -1,0 +1,12 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="ProjectLevelVcsManager">
+        <ConfirmationsSetting value="1" id="Add" />
+      </component>
+      <component name="PropertiesComponent">
+        <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+      </component>
+    </defaultProject>
+  </component>
+</application>
