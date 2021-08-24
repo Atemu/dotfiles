@@ -2,5 +2,18 @@
 " Reference: https://github.com/JetBrains/ideavim/wiki/sethandler
 sethandler n-v:vim i:ide
 
+" Use IDE/Emacs keybinds in all modes for these binds
+" Recenter
+sethandler <C-l> a:ide
+" Actions
+sethandler <C-x> a:ide
+" Search
+sethandler <C-s> a:ide
+" Cancel
+sethandler <C-g> a:ide
+" Show context info
+sethandler <C-q> a:ide
+" TODO Handle C-c (breakpoints), it's prefixd with C-c but then uses other keys
+
 " Use system clipboard
 set clipboard+=unnamed
