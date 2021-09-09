@@ -1,2 +1,6 @@
+" Use Emacs keymap in insert mode
+" Reference: https://github.com/JetBrains/ideavim/wiki/sethandler
+sethandler n-v:vim i:ide
+
 " Use system clipboard
 set clipboard+=unnamed
