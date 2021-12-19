@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+target="$1"
+shift
+
+cd $target
+for dir in "$@" ; do
+    find . ! -type d -print | while read file ; do
+        file=${file:2}
+        mkdir -p `dirname ../"$dir/$file"`
+        ln -sf ../"$target/$file" ../"$dir/$file"
+    done
+done
+cd - > /dev/null
