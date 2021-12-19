@@ -16,3 +16,5 @@
 [annex]
 	genmetadata = true
 	adjustedbranchrefresh = 2 # refresh adjusted branches after every change
+[github]
+	user = Atemu
