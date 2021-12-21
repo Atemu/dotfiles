@@ -661,6 +661,9 @@ before packages are loaded."
   ;; Collect garbage interactively
   (spacemacs/set-leader-keys "\\" 'garbage-collect)
 
+  ;; Make Magit git-annex integration accessible
+  (spacemacs/set-leader-keys "g a" 'magit-annex-dispatch)
+
   ;; Right option gets interpreted as M- by default
   (setq mac-right-option-modifier "none"
         ;; MacPort turns the meta key into macOS' weird special character "option" key by default. No to that.
