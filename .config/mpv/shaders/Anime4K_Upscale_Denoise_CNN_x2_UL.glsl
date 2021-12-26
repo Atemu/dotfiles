@@ -1,0 +1,1 @@
+Anime4K/glsl/Upscale+Denoise/Anime4K_Upscale_Denoise_CNN_x2_UL.glsl
