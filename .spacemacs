@@ -98,7 +98,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(magit-gitflow
+   dotspacemacs-excluded-packages '(forge ;; Conflicts with magit-annex and overrides the b n shortcut ...why?
+                                    magit-gitflow
                                     vterm) ;; needs to be compiled
 
    ;; Defines the behaviour of Spacemacs when installing packages.
