@@ -99,7 +99,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(forge ;; Conflicts with magit-annex and overrides the b n shortcut ...why?
-                                    magit-gitflow
+                                    magit-gitflow ;; Conflicts with the worktree shortcut (%) and ...why tf would I want that?
                                     vterm) ;; needs to be compiled
 
    ;; Defines the behaviour of Spacemacs when installing packages.
