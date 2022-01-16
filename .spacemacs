@@ -664,6 +664,11 @@ before packages are loaded."
   ;; Make Magit git-annex integration accessible
   (spacemacs/set-leader-keys "g a" 'magit-annex-dispatch)
 
+  ;; Split vertically no matter what
+  (setq
+   split-width-threshold 0
+   split-height-threshold nil)
+
   ;; Right option gets interpreted as M- by default
   (setq mac-right-option-modifier "none"
         ;; MacPort turns the meta key into macOS' weird special character "option" key by default. No to that.
