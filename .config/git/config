@@ -5,6 +5,9 @@
 [includeIf "gitdir/i:~/work/"]
 	path = ~/work/.gitconfig
 
+[fetch]
+	prune = true
+
 [merge]
 	tool = vimdiff
 [advice]
