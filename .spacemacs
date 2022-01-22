@@ -688,6 +688,9 @@ before packages are loaded."
 
   (setq org-todo-keywords '((sequence "TODO" "|" "DONE" "ABRT")))
 
+  ;; Explicitly enable indenting of content under headings
+  (setq org-adapt-indentation t)
+
   ;; Put LaTeX tmp files into /tmp/ instead of working dir
   ;; https://tex.stackexchange.com/a/111965
   (add-hook 'LaTeX-mode-hook (lambda ()
