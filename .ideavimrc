@@ -20,3 +20,7 @@ set clipboard+=unnamed
 
 " https://github.com/JetBrains/ideavim/wiki/Emulated-plugins#surround
 set surround
+
+" No spurrious sounds to interrupt my music
+set visualbell
+set noerrorbells
