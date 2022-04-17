@@ -6,6 +6,8 @@ exec systemctl start --user graphical-session.target
 # Merge Xresources for Xwayland
 exec xrdb ~/.Xresources
 
+output * adaptive_sync on
+
 input type:keyboard {
   xkb_options caps:escape
   repeat_delay 224
