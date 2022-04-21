@@ -20,5 +20,7 @@
 	genmetadata = true
 	adjustedbranchrefresh = 2 # refresh adjusted branches after every change
 	autocommit = false
+	diskreserve = 1G # Default of 256M is often not enough for a repack
+
 [github]
 	user = Atemu
