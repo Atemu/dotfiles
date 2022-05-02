@@ -540,6 +540,9 @@ before packages are loaded."
   ;; Don't pollute working dir with LockFiles
   (setq create-lockfiles nil)
 
+  ;; Prevent undo tree files from polluting the filesystem
+  (setq undo-tree-history-directory-alist `(("." . ,(concat spacemacs-cache-directory "undo-tree"))))
+
   ;; Enable Garbage Collector Magic Hack
   (gcmh-mode 1)
   (setq gcmh-idle-delay 1)
