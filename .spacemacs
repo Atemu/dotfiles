@@ -482,7 +482,7 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; Put auto-generated custom-settings somewhere where they don't interfere
   ;; with VC
-  (setq custom-file "~/.emacs.d/.cache/.custom-settings")
+  (setq custom-file (concat spacemacs-cache-directory ".custom-settings"))
   (load custom-file)
 
   ;; Show diff in left fringe
