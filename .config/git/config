@@ -4,6 +4,8 @@
 
 [includeIf "gitdir/i:~/work/"]
 	path = ~/work/.gitconfig
+[includeIf "gitdir/i:~/Uni/"]
+	path = ~/Uni/.gitconfig
 
 [fetch]
 	prune = true
