@@ -11,6 +11,9 @@ fi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source the profile if it wasn't already
+[[ ! $PROFILE_SOURCED ]] && source ~/.profile
+
 #load aliases from alias file:
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
