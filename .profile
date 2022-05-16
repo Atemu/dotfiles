@@ -1,3 +1,5 @@
+export PROFILE_SOURCED=1
+
 #Set freedesktop dirs
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
