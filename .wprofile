@@ -1,3 +1,6 @@
+# Source the profile if it wasn't already
+[[ ! $PROFILE_SOURCED ]] && source ~/.profile
+
 export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 

@@ -1,3 +1,6 @@
+# Source the profile if it wasn't already
+[[ ! $PROFILE_SOURCED ]] && source ~/.profile
+
 #enable touch scrollin in FF
 export MOZ_USE_XINPUT2=1
 
