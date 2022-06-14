@@ -543,6 +543,9 @@ before packages are loaded."
   ;; Prevent undo tree files from polluting the filesystem
   (setq undo-tree-history-directory-alist `(("." . ,(concat spacemacs-cache-directory "undo-tree"))))
 
+  ;; Don't pollute working dir with pdf-view-restore files either
+  (setq pdf-view-restore-filename (concat spacemacs-cache-directory ".pdf-view-restore"))
+
   ;; Enable Garbage Collector Magic Hack
   (gcmh-mode 1)
   (setq gcmh-idle-delay 1)
