@@ -581,6 +581,9 @@ before packages are loaded."
      ;; Show time since commit in the left in magit-status
      magit-status-margin '(t age magit-log-margin-width nil 18)
 
+     ;; Don't ask to save buffers
+     magit-save-repository-buffers nil
+
      ;; customise default flags for transient actions
      transient-values '((magit-merge "--no-ff")
                         (magit-annex-sync "--content"))))
