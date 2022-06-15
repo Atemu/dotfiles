@@ -586,6 +586,8 @@ before packages are loaded."
                            t ; author
                            18 ; author-width
                            )
+     ;; Show branch names, tags etc. after commit message
+     magit-log-show-refname-after-summary t
 
      ;; Don't ask to save buffers
      magit-save-repository-buffers nil
