@@ -583,7 +583,7 @@ before packages are loaded."
                            t ; init
                            age ; style
                            magit-log-margin-width ; width
-                           nil ; author
+                           t ; author
                            18 ; author-width
                            )
 
