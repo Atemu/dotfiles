@@ -579,7 +579,13 @@ before packages are loaded."
      magit-status-headers-hook (delete 'magit-insert-tags-header magit-status-headers-hook)
 
      ;; Show time since commit in the left in magit-status
-     magit-status-margin '(t age magit-log-margin-width nil 18)
+     magit-status-margin '(
+                           t ; init
+                           age ; style
+                           magit-log-margin-width ; width
+                           nil ; author
+                           18 ; author-width
+                           )
 
      ;; Don't ask to save buffers
      magit-save-repository-buffers nil
