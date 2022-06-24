@@ -491,7 +491,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   (setq
    ;; Make matching parens highlight while you type them
-   evil-show-paren-range 1)
+   evil-show-paren-range 1
+
+   ;; No delay please
+   show-paren-delay 0.01)
 
   ;; Disable Spacemacs' org-mode heading font height adjustment
   ;; I prefer them to all be the same size
