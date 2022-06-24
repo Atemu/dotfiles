@@ -496,10 +496,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
    ;; No delay please
    show-paren-delay 0.01)
 
-  ;; Disable Spacemacs' org-mode heading font height adjustment
-  ;; I prefer them to all be the same size
   (setq theming-modifications
         '((spacemacs-dark
+           ;; Disable Spacemacs' org-mode heading font height adjustment
+           ;; I prefer them to all be the same size
            (org-level-1 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-2 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-3 :height 1.0 :width normal :weight normal :bold normal)
@@ -508,12 +508,22 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
            (org-level-6 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-7 :height 1.0 :width normal :weight normal :bold normal)
            (org-level-8 :height 1.0 :width normal :weight normal :bold normal))
+
            (wombat
             (hl-line
              ;; Set color to something other than the selection color
              :background "gray13"
              ;; Do not underline
-             :underline nil))))
+             :underline nil)
+
+            ;; org-mode adjustments
+            (org-headline-done :foreground "#99968b")
+            (org-level-1 :foreground "#8ac6f2")
+            (org-level-2 :foreground "#95e454")
+            (org-level-3 :foreground "#cae682")
+            (org-level-4 :foreground "#ccaa8f")
+            (org-level-5 :foreground "#92a65e")
+            )))
 
   ;; Let Emacs use all the CPUs it could need to compile native packages
   (setq comp-num-cpus 12
