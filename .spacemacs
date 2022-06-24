@@ -489,6 +489,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; Show diff in left fringe
   (setq version-control-diff-side 'left)
 
+  (setq
+   ;; Make matching parens highlight while you type them
+   evil-show-paren-range 1)
+
   ;; Disable Spacemacs' org-mode heading font height adjustment
   ;; I prefer them to all be the same size
   (setq theming-modifications
