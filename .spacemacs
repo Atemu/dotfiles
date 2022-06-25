@@ -690,6 +690,15 @@ before packages are loaded."
     (setq adaptive-wrap-extra-indent 2))
   (add-hook 'prog-mode-hook #'custom-prog-mode-hook)
 
+  ;; Chmod the buffers currently visited file
+  ;; © Wild Pottok CC BY-SA 4.0
+  ;; https://emacs.stackexchange.com/a/72178/26492
+  (defun chmod-this-file ()
+    "chmod the file corresponding to the current buffer."
+    (interactive)
+    (setq modes (read-file-modes "File modes (octal or symbolic): " buffer-file-name))
+    (chmod buffer-file-name modes))
+
   ;; Switch buffers with SPC SPC
   (spacemacs/set-leader-keys "SPC" 'ivy-switch-buffer)
 
