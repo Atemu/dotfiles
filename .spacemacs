@@ -694,6 +694,14 @@ before packages are loaded."
     (setq adaptive-wrap-extra-indent 2))
   (add-hook 'prog-mode-hook #'custom-prog-mode-hook)
 
+  ;; Immediately quit ediff on `q'
+  ;; © Clément Lassieur CC BY-SA 3.0
+  ;; https://emacs.stackexchange.com/a/24602/26492
+  (defun disable-y-or-n-p (orig-fun &rest args)
+    (cl-letf (((symbol-function 'y-or-n-p) (lambda (prompt) t)))
+      (apply orig-fun args)))
+  (advice-add 'ediff-quit :around #'disable-y-or-n-p)
+
   ;; Chmod the buffers currently visited file
   ;; © Wild Pottok CC BY-SA 4.0
   ;; https://emacs.stackexchange.com/a/72178/26492
