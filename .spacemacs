@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      debug
      docker
      emacs-lisp
-     git
+     (git :variables git-enable-magit-delta-plugin t)
      groovy
      haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
@@ -609,6 +609,10 @@ before packages are loaded."
 
      ;; Don't ask to save buffers
      magit-save-repository-buffers nil
+
+     ;; Makes magit-delta's colours less off
+     ;; See https://github.com/dandavison/magit-delta/issues/24
+     magit-delta-delta-args '("--true-color" "never" "--color-only")
 
      ;; customise default flags for transient actions
      transient-values '((magit-merge "--no-ff")
