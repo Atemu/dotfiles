@@ -512,7 +512,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
            (wombat
             (hl-line
              ;; Set color to something other than the selection color
-             :background "gray13"
+             :background "gray10"
              ;; Do not underline
              :underline nil)
 
