@@ -1,5 +1,7 @@
+# Technically wombat calls for #242424 here but that'd be the same as the
+# background colour. Use gray10 instead.
 # Black
-0 = #242424
+0 = #1a1a1a
 8 = #444444
 
 # Red
