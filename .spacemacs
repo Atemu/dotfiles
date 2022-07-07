@@ -515,6 +515,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
              :background "gray10"
              ;; Do not underline
              :underline nil)
+            (magit-section-highlight :background "gray10")
+
 
             ;; org-mode adjustments
             (org-headline-done :foreground "#99968b")
