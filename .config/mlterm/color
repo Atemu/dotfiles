@@ -1,32 +1,32 @@
 # Black
-0 = #000000
-8 = #313131
+0 = #242424
+8 = #444444
 
 # Red
-1 = #ff615a
+1 = #b85149
 9 = #e5786d
 
 #Green
 
-2 = #b1e969
-10 = #ddf88f
+2 = #92a65e
+10 = #95e454
 
 # Yellow
-3 = #ebd99c
-11 = #eee5b2
+3 = #ccaa8f
+11 = #edc4a3
 
 # Blue
-4 = #5da9f6
-12 = #a5c7ff
+4 = #5b98c2
+12 = #8ac6f2
 
 # Magenta
-5 = #e86aff
-13 = #ddaaff
+5 = #64619a
+13 = #a6a1de
 
 # Cyan
-6 = #82fff7
-14 = #b7fff9
+6 = #3f9f9e
+14 = #70cecc
 
 # White
-7 = #dedacf
+7 = #f6f3e8
 15 = #ffffff
