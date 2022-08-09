@@ -84,6 +84,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(atomic-chrome
                                       adaptive-wrap
                                       bash-completion
+                                      ctrlf
                                       disk-usage
                                       gcmh
                                       git-annex
@@ -585,6 +586,19 @@ before packages are loaded."
 
   ;; Re-center the screen when switching swiper results
   (setq swiper-action-recenter t)
+
+  ;; Enable ctrlf-mode; better isearch
+  (ctrlf-mode)
+
+  ;; FIXME this doesn't yet work because of https://github.com/radian-software/ctrlf/issues/119
+  (define-key ctrlf-minibuffer-mode-map (kbd "C-n") 'ctrlf-next-match)
+  (define-key ctrlf-minibuffer-mode-map (kbd "C-p") 'ctrlf-previous-match)
+
+  ;; Use fuzzy
+  (define-key ctrlf-mode-map (kbd "C-s") 'ctrlf-forward-fuzzy)
+  (define-key ctrlf-mode-map (kbd "C-r") 'ctrlf-backward-fuzzy)
+
+  (setq ctrlf-auto-recenter t)
 
   (with-eval-after-load 'magit
     ;; Exit transient buffers with ESC
