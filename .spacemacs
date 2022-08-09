@@ -89,6 +89,7 @@ This function should only modify configuration layer settings."
                                       git-annex
                                       magit-annex
                                       mpv
+                                      parrot
                                       (ligature :location (recipe :fetcher github :repo "mickeynp/ligature.el"))
                                       (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
                                       (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
@@ -665,6 +666,11 @@ before packages are loaded."
 
   ;; Make disk-usage show results without --apparent-size
   (setq disk-usage--du-args "-sB1")
+
+  ;; parrot-mode can "rotate" words like true -> false etc.
+  (define-key evil-normal-state-map (kbd "[r") 'parrot-rotate-prev-word-at-point)
+  (define-key evil-normal-state-map (kbd "]r") 'parrot-rotate-next-word-at-point)
+  (parrot-mode)
 
   ;; Enable adaptive-wrap globally
   ;; Taken from https://github.com/kaushalmodi/.emacs.d/blob/2015b51b2e0129e0af0d0efbb716b18f38038524/setup-files/setup-visual.el#L202-L218
