@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      ;; auto-completion
      ;; better-defaults
      c-c++
+     (compleseus :variables compleseus-engine 'vertico)
      debug
      docker
      emacs-lisp
@@ -47,7 +48,6 @@ This function should only modify configuration layer settings."
      groovy
      haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
-     (ivy)
      (javascript)
      kotlin
      latex
@@ -582,7 +582,13 @@ before packages are loaded."
     ;; completion (without current selection) using C-M-j)
     (setq ivy-extra-directories nil))
 
-  ;; Set default projectile switch project action to open magit
+  ;; Open magit instead of project-find-files when switching projects
+  (setq projectile-switch-project-action
+        (lambda ()
+          (require 'magit)
+          (magit)))
+  ;; Make counsel-projectile do the same. Counsel needs special treatment for
+  ;; some reason rather than simply consuming projectile-switch-project-action
   (with-eval-after-load 'counsel-projectile
     (counsel-projectile-modify-action
      'counsel-projectile-switch-project-action
@@ -603,6 +609,15 @@ before packages are loaded."
   ;; Use fuzzy
   (define-key ctrlf-mode-map (kbd "C-s") 'ctrlf-forward-fuzzy)
   (define-key ctrlf-mode-map (kbd "C-r") 'ctrlf-backward-fuzzy)
+
+  ;; Don't show previews when
+  (setq consult-preview-key (kbd "C-SPC"))
+
+  ;; Allow cycling backwards. Mostly important for counsel-file
+  (setq vertico-cycle t)
+
+  ;; Don't quit minibuffer after executing some embark action
+  (setq embark-quit-after-action nil)
 
   (with-eval-after-load 'magit
     ;; Exit transient buffers with ESC
