@@ -518,6 +518,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
              ;; Do not underline
              :underline nil)
             (magit-section-highlight :background "gray10")
+            (smerge-refined-added :background "#336633") ; magit-diff-added-highlight
+            (smerge-refined-removed :background "##663333") ; magit-diff-removed-highlight
+
 
 
             ;; org-mode adjustments
