@@ -759,6 +759,9 @@ before packages are loaded."
   ;; since it's the mac one that will be shown anyways.
   (when (string-equal system-type "darwin")
     (menu-bar-mode 1))
+  ;; Transparent titlebar on macOS.
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 
   (require 'bash-completion)
