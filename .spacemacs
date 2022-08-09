@@ -591,8 +591,8 @@ before packages are loaded."
   (ctrlf-mode)
 
   ;; FIXME this doesn't yet work because of https://github.com/radian-software/ctrlf/issues/119
-  (define-key ctrlf-minibuffer-mode-map (kbd "C-n") 'ctrlf-next-match)
-  (define-key ctrlf-minibuffer-mode-map (kbd "C-p") 'ctrlf-previous-match)
+  ;; (define-key ctrlf-minibuffer-mode-map (kbd "C-n") 'ctrlf-next-match)
+  ;; (define-key ctrlf-minibuffer-mode-map (kbd "C-p") 'ctrlf-previous-match)
 
   ;; Use fuzzy
   (define-key ctrlf-mode-map (kbd "C-s") 'ctrlf-forward-fuzzy)
