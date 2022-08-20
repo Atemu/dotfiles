@@ -582,6 +582,9 @@ before packages are loaded."
     ;; completion (without current selection) using C-M-j)
     (setq ivy-extra-directories nil))
 
+  ;; Open magit when switching projects
+  (setq projectile-switch-project-action 'projectile-vc)
+
   ;; Set default projectile switch project action to open magit
   (with-eval-after-load 'counsel-projectile
     (counsel-projectile-modify-action
