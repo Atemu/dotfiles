@@ -614,6 +614,23 @@ before packages are loaded."
   (setq consult-preview-key (kbd "C-SPC"))
 
   (with-eval-after-load 'vertico
+    ;; Adjusted examples from the wiki
+    (defvar vertico-previous-directory nil
+      "The directory that was just left. It is set when leaving a directory and
+    set back to nil once it is used in the parent directory.")
+    (defun vertico-directory-delete-entry ()
+      "Delete directory or entire entry before point."
+      (interactive)
+      (when (and (> (point) (minibuffer-prompt-end))
+                 (eq 'file (vertico--metadata-get 'category)))
+        (save-excursion
+          (goto-char (1- (point)))
+          (when (search-backward "/" (minibuffer-prompt-end) t)
+            (delete-region (1+ (point)) (point-max))
+            t))))
+    ;; Use HELM-like keybind for directory-up
+    (define-key vertico-map (kbd "C-l") 'vertico-directory-delete-entry)
+
     ;; Same as ivy-alt-done
     (define-key vertico-map (kbd "C-j") 'vertico-directory-enter))
 
