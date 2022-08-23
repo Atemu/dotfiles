@@ -613,6 +613,10 @@ before packages are loaded."
   ;; Don't show previews when
   (setq consult-preview-key (kbd "C-SPC"))
 
+  (with-eval-after-load 'vertico
+    ;; Same as ivy-alt-done
+    (define-key vertico-map (kbd "C-j") 'vertico-directory-enter))
+
   ;; Allow cycling backwards. Mostly important for counsel-file
   (setq vertico-cycle t)
 
