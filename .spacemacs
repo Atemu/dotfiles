@@ -618,6 +618,7 @@ before packages are loaded."
     (defvar vertico-previous-directory nil
       "The directory that was just left. It is set when leaving a directory and
     set back to nil once it is used in the parent directory.")
+    ;; Combination of the wiki examples on vertico-directory-delete-entry and set-previous-directory
     (defun vertico-directory-delete-entry ()
       "Delete directory or entire entry before point."
       (interactive)
@@ -626,8 +627,21 @@ before packages are loaded."
         (save-excursion
           (goto-char (1- (point)))
           (when (search-backward "/" (minibuffer-prompt-end) t)
+            ;; set parent directory
+            (setq vertico-previous-directory (buffer-substring (1+ (point)) (point-max)))
+            ;; set back to nil if not sorting by directories or what was deleted is not a directory
+            (when (not (string-suffix-p "/" vertico-previous-directory))
+              (setq vertico-previous-directory nil))
             (delete-region (1+ (point)) (point-max))
             t))))
+    ;; Select vertico-previous-directory candidate if we went a directory up before
+    (define-advice vertico--update-candidates (:after (&rest _) choose-candidate)
+      "Pick the previous directory rather than the prompt after updating candidates."
+      (cond
+       (vertico-previous-directory ; select previous directory
+        (setq vertico--index (or (seq-position vertico--candidates vertico-previous-directory)
+                                 vertico--index))
+        (setq vertico-previous-directory nil))))
     ;; Use HELM-like keybind for directory-up
     (define-key vertico-map (kbd "C-l") 'vertico-directory-delete-entry)
 
