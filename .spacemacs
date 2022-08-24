@@ -638,12 +638,16 @@ before packages are loaded."
             t))))
     ;; Select vertico-previous-directory candidate if we went a directory up before
     (define-advice vertico--update-candidates (:after (&rest _) choose-candidate)
-      "Pick the previous directory rather than the prompt after updating candidates."
-      (cond
-       (vertico-previous-directory ; select previous directory
-        (setq vertico--index (or (seq-position vertico--candidates vertico-previous-directory)
-                                 vertico--index))
-        (setq vertico-previous-directory nil))))
+      "Pick the the previous directory or the first candidate rather
+than the prompt after updating candidates."
+      (if vertico-previous-directory
+          ;; Select previous directory
+          (setq vertico--index (or (seq-position vertico--candidates vertico-previous-directory)
+                                   vertico--index)
+                vertico-previous-directory nil)
+        ;; Else select the first item, not the prompt
+        (setq vertico--index 0)))
+
     ;; Use HELM-like keybind for directory-up
     (define-key vertico-map (kbd "C-l") 'vertico-directory-delete-entry)
 
