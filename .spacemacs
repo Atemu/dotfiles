@@ -623,6 +623,8 @@ before packages are loaded."
       "Delete directory or entire entry before point."
       (interactive)
       (when (and (> (point) (minibuffer-prompt-end))
+                 ;; Check vertico--base for stepwise file path completion
+                 (not (equal vertico--base ""))
                  (eq 'file (vertico--metadata-get 'category)))
         (save-excursion
           (goto-char (1- (point)))
