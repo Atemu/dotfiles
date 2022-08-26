@@ -582,10 +582,10 @@ before packages are loaded."
     ;; completion (without current selection) using C-M-j)
     (setq ivy-extra-directories nil))
 
-  ;; Open magit when switching projects
+  ;; Open magit instead of project-find-files when switching projects
   (setq projectile-switch-project-action 'projectile-vc)
-
-  ;; Set default projectile switch project action to open magit
+  ;; Make counsel-projectile do the same. Counsel needs special treatment for
+  ;; some reason rather than simply consuming projectile-switch-project-action
   (with-eval-after-load 'counsel-projectile
     (counsel-projectile-modify-action
      'counsel-projectile-switch-project-action
