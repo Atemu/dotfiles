@@ -787,6 +787,10 @@ before packages are loaded."
                                TeX-command-list)))
   (setq latex-build-command "Latex_outdir")
 
+  ;; Highlight values in comments in nix-mode
+  ;; TODO all prog-modes should do this
+  (font-lock-add-keywords 'nix-mode '(("`\\([a-z-]+\\)'" 1 'font-lock-constant-face prepend)))
+
   ;; Enable ligatures
   (require 'ligature)
   (global-ligature-mode t)
