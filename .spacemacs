@@ -583,10 +583,7 @@ before packages are loaded."
     (setq ivy-extra-directories nil))
 
   ;; Open magit instead of project-find-files when switching projects
-  (setq projectile-switch-project-action
-        (lambda ()
-          (require 'magit)
-          (magit)))
+  (setq projectile-switch-project-action 'projectile-vc)
   ;; Make counsel-projectile do the same. Counsel needs special treatment for
   ;; some reason rather than simply consuming projectile-switch-project-action
   (with-eval-after-load 'counsel-projectile
