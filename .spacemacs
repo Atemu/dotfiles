@@ -646,7 +646,9 @@ than the prompt after updating candidates."
                                    vertico--index)
                 vertico-previous-directory nil)
         ;; Else select the first item, not the prompt
-        (setq vertico--index 0)))
+        (when
+            (> (length vertico--candidates) 0)
+          (setq vertico--index 0))))
 
     ;; Use HELM-like keybind for directory-up
     (define-key vertico-map (kbd "C-l") 'vertico-directory-delete-entry)
