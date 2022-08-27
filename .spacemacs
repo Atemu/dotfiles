@@ -663,6 +663,11 @@ than the prompt after updating candidates."
   (with-eval-after-load 'magit
     ;; Exit transient buffers with ESC
     (define-key transient-base-map (kbd "<escape>") 'transient-quit-one)
+    (evil-define-key 'normal magit-mode-map
+      (kbd "C-n") 'evil-next-line
+      (kbd "C-p") 'evil-previous-line
+      (kbd "j") 'magit-section-forward
+      (kbd "k") 'magit-section-backward)
 
     (setq
      ;; Make Magit open its buffer in the current window but use an existins split for diffs
