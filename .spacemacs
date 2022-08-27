@@ -640,6 +640,8 @@ before packages are loaded."
     (define-advice vertico--update-candidates (:after (&rest _) choose-candidate)
       "Pick the the previous directory or the first candidate rather
 than the prompt after updating candidates."
+      (when (eq 'consult-location (vertico--metadata-get 'category))
+        (setq-local vertico-cycle t))
       (if vertico-previous-directory
           ;; Select previous directory
           (setq vertico--index (or (seq-position vertico--candidates vertico-previous-directory)
@@ -655,9 +657,6 @@ than the prompt after updating candidates."
 
     ;; Same as ivy-alt-done
     (define-key vertico-map (kbd "C-j") 'vertico-directory-enter))
-
-  ;; Allow cycling backwards. Mostly important for counsel-file
-  (setq vertico-cycle t)
 
   ;; Don't quit minibuffer after executing some embark action
   (setq embark-quit-after-action nil)
