@@ -10,7 +10,7 @@ alias 8601ue='echo $(8601e -u)Z'
 alias cp='cp --reflink=auto'
 alias cps='cp --sparse=auto'
 alias sudo='sudo ' #pass aliases to sudo https://askubuntu.com/a/22043/863714
-alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk?' #io monitoring command
+alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk? /dev/vd?' #io monitoring command
 alias please='sudo '
 alias fucking='sudo '
 alias ip='ip --color'
