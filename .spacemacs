@@ -783,6 +783,11 @@ before packages are loaded."
   (bash-completion-setup)
 
   (with-eval-after-load 'org
+
+    ;; Enable :ignore: tag
+    (require 'ox-extra)
+    (ox-extras-activate '(ignore-headlines))
+
     (setq
      ;; Explicitly enable indenting of content under headings
      org-adapt-indentation t
