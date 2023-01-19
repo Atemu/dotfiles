@@ -782,10 +782,12 @@ before packages are loaded."
   (require 'bash-completion)
   (bash-completion-setup)
 
-  (setq org-todo-keywords '((sequence "TODO" "|" "DONE" "ABRT")))
+  (with-eval-after-load 'org
+    (setq
+     ;; Explicitly enable indenting of content under headings
+     org-adapt-indentation t
 
-  ;; Explicitly enable indenting of content under headings
-  (setq org-adapt-indentation t)
+     org-todo-keywords '((sequence "TODO" "|" "DONE" "ABRT"))))
 
   ;; Put LaTeX tmp files into /tmp/ instead of working dir
   ;; https://tex.stackexchange.com/a/111965
