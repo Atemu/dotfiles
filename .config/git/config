@@ -29,6 +29,7 @@
 	adjustedbranchrefresh = 2 # refresh adjusted branches after every change
 	autocommit = false
 	diskreserve = 1G # Default of 256M is often not enough for a repack
+	jobs = 2
 
 [github]
 	user = Atemu
