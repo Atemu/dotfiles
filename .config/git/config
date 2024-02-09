@@ -18,6 +18,7 @@
 
 [merge]
 	tool = vimdiff
+	conflictStyle = zdiff3
 [advice]
 	detachedHead = off
 [diff "mozlz4"]
