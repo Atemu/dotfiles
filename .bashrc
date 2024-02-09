@@ -37,13 +37,13 @@ shopt -s lithist
 
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
-  if [ -e ~/.nix-profile/share/bash-completion/bash_completion ]; then
-    . ~/.nix-profile/share/bash-completion/bash_completion
-  elif [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    PROFILE_BASH_COMPLETIONS=$(for profile in $NIX_PROFILES ; do echo "$profile"/share/bash-completion/bash_completion ; done)
+
+    for i in /usr/share/bash-completion/bash_completion /etc/bash_completion $PROFILE_BASH_COMPLETIONS ; do
+        if [ -e "$i" ] ; then
+            . "$i"
+        fi
+    done
 fi
 
 #enable vi mode
