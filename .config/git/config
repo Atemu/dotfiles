@@ -9,6 +9,10 @@
 
 [core]
 	pager = delta
+	# fsmonitor = true
+	untrackedcache = true
+	commitGraph = true
+	multiPackIndex = true
 
 [diff]
 	colorMoved = default
