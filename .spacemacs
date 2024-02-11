@@ -60,7 +60,7 @@ This function should only modify configuration layer settings."
      ranger
      rust
      (shell :variables shell-default-shell 'shell
-            shell-default-term-shell "~/.nix-profile/bin/bash")
+            shell-default-term-shell "~/.local/state/nix/profile/bin/bash")
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
