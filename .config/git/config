@@ -35,6 +35,7 @@
 	autocommit = false
 	diskreserve = 1G # Default of 256M is often not enough for a repack
 	jobs = 2
+	synccontent = no
 
 [github]
 	user = Atemu
