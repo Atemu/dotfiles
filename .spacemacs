@@ -647,8 +647,7 @@ before packages are loaded."
      magit-delta-delta-args '("--true-color" "never" "--color-only")
 
      ;; customise default flags for transient actions
-     transient-values '((magit-merge "--no-ff")
-                        (magit-annex-sync "--content"))))
+     transient-values '((magit-merge "--no-ff"))))
 
   (with-eval-after-load 'git-commit
     ;; Disable auto-fill-mode in git-commit-mode
