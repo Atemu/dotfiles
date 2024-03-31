@@ -27,3 +27,6 @@ input type:pointer {
   # Disable while typing
   dwt enabled
 }
+
+# suspend the system
+bindsym --no-warn $mod+Shift+s exec swaylock --daemonize && sleep 1 && systemctl suspend
