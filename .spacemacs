@@ -681,6 +681,8 @@ before packages are loaded."
 
   (with-eval-after-load 'eglot
     (setq
+     ;; Shut down LSP after buffers are gone
+     eglot-autoshutdown t
      ;; Don't spam minibuffer with irrelevant progress messages
      eglot-report-progress nil))
 
