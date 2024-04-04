@@ -686,6 +686,11 @@ before packages are loaded."
      ;; Don't spam minibuffer with irrelevant progress messages
      eglot-report-progress nil))
 
+  (with-eval-after-load 'eldoc
+    (setq
+     ;; Don't make minibuffer jump between being a mini- and maxibuffer
+     eldoc-echo-area-use-multiline-p nil))
+
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
          '(["\\.\\(?:mozlz4\\|json\\.lz4\\|jsonlz4\\)\\'"
