@@ -93,7 +93,7 @@ This function should only modify configuration layer settings."
                                       parrot
                                       (ligature :location (recipe :fetcher github :repo "mickeynp/ligature.el"))
                                       (smali-mode :location (recipe :fetcher github :repo "strazzere/Emacs-Smali"))
-                                      (ivy-nixos-options :location (recipe :fetcher github :repo "Melkor333/nix-emacs")))
+                                      (ivy-nixos-options :location (recipe :fetcher github :repo "travisbhartwell/nix-emacs")))
 
    ;; A list of packages that cannot be updated.
    ;; Currently no effect
