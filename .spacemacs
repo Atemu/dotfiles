@@ -86,6 +86,7 @@ This function should only modify configuration layer settings."
                                       bash-completion
                                       ctrlf
                                       disk-usage
+                                      envrc
                                       gcmh
                                       git-annex
                                       ligature
@@ -668,6 +669,8 @@ before packages are loaded."
 
   ;; Use nixpkgs-fmt for formatting nix buffers
   (setq nix-nixfmt-bin "nixpkgs-fmt")
+
+  (envrc-global-mode t)
 
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
