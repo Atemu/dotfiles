@@ -671,6 +671,8 @@ before packages are loaded."
             (quit-window)
           (call-interactively 'evil-record-macro)))))
 
+  (require 'ivy-nixos-options)
+
   (envrc-global-mode t)
 
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
