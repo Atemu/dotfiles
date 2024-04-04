@@ -1,7 +1,13 @@
 include ../i3/config
 
 # Start graphical session target
-exec systemctl start --user graphical-session.target
+# exec systemctl start --user graphical-session.target
+# exec --no-startup-id dbus-update-activation-environment --all
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
 
 # Merge Xresources for Xwayland
 exec xrdb ~/.Xresources
@@ -11,7 +17,7 @@ output * adaptive_sync on
 input type:keyboard {
   xkb_options caps:escape
   repeat_delay 224
-  repeat_rate 24
+  repeat_rate 30
   xkb_layout us
   xkb_variant altgr-intl
 }
@@ -21,3 +27,6 @@ input type:pointer {
   # Disable while typing
   dwt enabled
 }
+
+# suspend the system
+bindsym --no-warn $mod+Shift+s exec swaylock --daemonize && sleep 1 && systemctl suspend
