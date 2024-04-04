@@ -679,6 +679,11 @@ before packages are loaded."
 
   (envrc-global-mode t)
 
+  (with-eval-after-load 'eglot
+    (setq
+     ;; Don't spam minibuffer with irrelevant progress messages
+     eglot-report-progress nil))
+
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
          '(["\\.\\(?:mozlz4\\|json\\.lz4\\|jsonlz4\\)\\'"
