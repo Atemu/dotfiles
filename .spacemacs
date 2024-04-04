@@ -691,6 +691,9 @@ before packages are loaded."
      ;; Don't make minibuffer jump between being a mini- and maxibuffer
      eldoc-echo-area-use-multiline-p nil))
 
+  ;; Disable dante-mode as it doesn't work for me and I use eglot instead
+  (setq haskell-completion-backend nil)
+
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
          '(["\\.\\(?:mozlz4\\|json\\.lz4\\|jsonlz4\\)\\'"
