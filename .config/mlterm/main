@@ -13,3 +13,4 @@ use_anti_alias = true
 type_engine = cairo
 static_backscroll_mode = true
 word_separators = . ,:\x3b|@()[]{}`─
+bel_mode = none
