@@ -520,6 +520,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
              :background "gray10"
              ;; Do not underline
              :underline nil)
+            ;; Unfuck ediff colour, it was an ugly yellow
+            (ediff-current-diff-C "gray10")
+            (ediff-fine-diff-C "gray10")
+
             (magit-section-highlight :background "gray10")
             (smerge-refined-added :background "#336633") ; magit-diff-added-highlight
             (smerge-refined-removed :background "##663333") ; magit-diff-removed-highlight
