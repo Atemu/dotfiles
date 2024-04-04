@@ -105,6 +105,12 @@
       "<backtab>" #'ivy-backward-kill-word
       )
 
+;; Set default projectile switch project action to open magit
+(after! 'counsel-projectile
+  (counsel-projectile-modify-action
+   'counsel-projectile-switch-project-action
+   '((default counsel-projectile-switch-project-action-vc))))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
