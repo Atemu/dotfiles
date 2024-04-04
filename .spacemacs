@@ -673,6 +673,10 @@ before packages are loaded."
 
   (require 'ivy-nixos-options)
 
+  ;; Why would I want to be spammed by that?
+  (with-eval-after-load 'direnv
+    (setq direnv-always-show-summary nil))
+
   (envrc-global-mode t)
 
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
