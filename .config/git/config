@@ -8,6 +8,8 @@
 	path = ~/Uni/.gitconfig
 
 [core]
+	# Do not run arbitrary code downloaded off the internet, wtf git?
+	hooksPath = /dev/null
 	pager = delta
 	# fsmonitor = true
 	untrackedcache = true
