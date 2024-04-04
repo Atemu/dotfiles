@@ -12,4 +12,4 @@ use_ot_layout = true
 use_anti_alias = true
 type_engine = cairo
 static_backscroll_mode = true
-word_separators = . ,:\x3b|@()[]{}`
+word_separators = . ,:\x3b|@()[]{}`─
