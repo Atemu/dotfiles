@@ -88,10 +88,10 @@ This function should only modify configuration layer settings."
                                       disk-usage
                                       gcmh
                                       git-annex
+                                      ligature
                                       magit-annex
                                       mpv
                                       parrot
-                                      (ligature :location (recipe :fetcher github :repo "mickeynp/ligature.el"))
                                       (ivy-nixos-options :location (recipe :fetcher github :repo "travisbhartwell/nix-emacs")))
 
    ;; A list of packages that cannot be updated.
