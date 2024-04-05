@@ -30,6 +30,9 @@ input type:pointer {
 input 1221:5258:HID_04c5:148a_Mouse {
   # Disable while typing
   dwt enabled
+
+  # This touchpad is quite slow
+  pointer_accel 0.75
 }
 
 # suspend the system
