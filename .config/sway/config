@@ -24,6 +24,10 @@ input type:keyboard {
 
 input type:pointer {
   accel_profile flat
+}
+
+# Q775 touchpad
+input 1221:5258:HID_04c5:148a_Mouse {
   # Disable while typing
   dwt enabled
 }
