@@ -18,6 +18,7 @@
 
 [diff]
 	colorMoved = default
+	ignoreSubmodules = untracked
 
 [fetch]
 	prune = true
