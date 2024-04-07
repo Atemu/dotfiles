@@ -32,7 +32,7 @@ input 1221:5258:HID_04c5:148a_Mouse {
   dwt enabled
 
   # This touchpad is quite slow
-  pointer_accel 0.75
+  pointer_accel 1
 }
 
 # suspend the system
