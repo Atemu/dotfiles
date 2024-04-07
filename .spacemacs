@@ -791,6 +791,44 @@ before packages are loaded."
     (setq modes (read-file-modes "File modes (octal or symbolic): " buffer-file-name))
     (chmod buffer-file-name modes))
 
+  ;; From https://emacs.stackexchange.com/a/80954/26492
+  ;; © Gilles CC BY-SA 4.0
+  (defun match-region-indentation (beg end)
+   "Match the region's indentation to its starting point.
+
+  Call this function after yanking multiline indented text to match the yanked
+  text to the indentation of the place where it was yanked.
+
+  The first line of the yanked text must contain the indentation. Otherwise there
+  is no way to know by how much the other lines are indented, and you should call
+  \\[indent-rigidly] and manually specify by how much to reindent."
+   (interactive "@*r")
+    (save-excursion
+      (goto-char beg)
+      (let* ((target (current-column))
+         (extra (progn
+              (skip-syntax-forward "-" (line-end-position))
+              (- (current-column) target))))
+        (indent-rigidly (point) end (- target extra))
+        (delete-region beg (point)))))
+
+  (defun yank-and-match-indentation (&optional arg)
+    "Yank (paste) the last killed text, matching the indentation at point.
+
+  This is equivalent to \\[yank] followed by \\[match-region-indentation]."
+    (interactive "*P")
+    (yank arg)
+    (match-region-indentation (mark) (point)))
+
+  ;; Make the custom yank function be used on C-y
+  ;; FIXME what about yank-pop?
+  (substitute-key-definition 'yank 'yank-and-match-indentation global-map)
+
+  ;; Spacemacs indents the yanked region by default which conflicts with this.
+  ;; Disable that.
+  (dolist (func '(yank))
+    (advice-remove func #'spacemacs//yank-indent-region))
+
   ;; Switch buffers with SPC SPC
   (spacemacs/set-leader-keys "SPC" 'ivy-switch-buffer)
 
