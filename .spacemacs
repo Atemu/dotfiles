@@ -707,6 +707,9 @@ before packages are loaded."
     ;; before ispell-hunspell-add-multi-dic will work
     (ispell-set-spellchecker-params)
     (ispell-hunspell-add-multi-dic "en_GB,de_DE")
+    ;; Make the en_GB,de_DE dict recognise ' as part of the word (i.e. "doesn't")
+    (let ((item (cdr (assoc "en_GB,de_DE" ispell-dictionary-alist))))
+      (setf (nth 2 item) "[-.0-9ß']"))
     ;; For saving words to the personal dictionary, don't infer it from
     ;; the locale, otherwise it would save to ~/.hunspell_de_DE.
     (setq ispell-personal-dictionary "~/.hunspell_personal"))
