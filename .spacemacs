@@ -695,24 +695,24 @@ before packages are loaded."
   (setq haskell-completion-backend nil)
 
   ;; Adapted from https://200ok.ch/posts/2020-08-22_setting_up_spell_checking_with_multiple_dictionaries.html
-  (with-eval-after-load "ispell"
+  (with-eval-after-load "ispell" (let ((dict "en_GB,de_DE")) ;; Dict of my languages
     ;; Configure `LANG`, otherwise ispell.el cannot find a 'default
     ;; dictionary' even though multiple dictionaries will be configured
     ;; in next line.
     (setenv "LANG" "en_GB.UTF-8")
     (setq ispell-program-name "hunspell")
     ;; Configure German, Swiss German, and two variants of English.
-    (setq ispell-dictionary "en_GB,de_DE")
+    (setq ispell-dictionary dict)
     ;; ispell-set-spellchecker-params has to be called
     ;; before ispell-hunspell-add-multi-dic will work
     (ispell-set-spellchecker-params)
-    (ispell-hunspell-add-multi-dic "en_GB,de_DE")
+    (ispell-hunspell-add-multi-dic dict)
     ;; Make the en_GB,de_DE dict recognise ' as part of the word (i.e. "doesn't")
-    (let ((item (cdr (assoc "en_GB,de_DE" ispell-dictionary-alist))))
+    (let ((item (cdr (assoc dict ispell-dictionary-alist))))
       (setf (nth 2 item) "[-.0-9ß']"))
     ;; For saving words to the personal dictionary, don't infer it from
     ;; the locale, otherwise it would save to ~/.hunspell_de_DE.
-    (setq ispell-personal-dictionary "~/.hunspell_personal"))
+    (setq ispell-personal-dictionary "~/.hunspell_personal")))
 
   ;; Automatically uncompress mozlz4, Mozilla's weird and unnecessary lz4 wrapper
   (nconc jka-compr-compression-info-list
