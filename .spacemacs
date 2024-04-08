@@ -602,8 +602,11 @@ before packages are loaded."
     "Whether a given path is inside the Nix store or not."
     (string-prefix-p "/nix/store" path))
   (with-eval-after-load 'projectile
-    ;; Don't consider anything in the Nix store to be a project of any sort
-    (setq projectile-ignored-project-function 'path-in-nix-store-p))
+    (setq
+     ;; Don't consider anything in the Nix store to be a project of any sort
+     projectile-ignored-project-function 'path-in-nix-store-p
+
+     projectile-project-search-path '(("~/Projects" . 1) ("~/Repos" . 1))))
 
   ;; Re-center the screen when switching swiper results
   (setq swiper-action-recenter t)
