@@ -651,7 +651,13 @@ before packages are loaded."
      magit-delta-delta-args '("--true-color" "never" "--color-only")
 
      ;; customise default flags for transient actions
-     transient-values '((magit-merge "--no-ff"))))
+     transient-values '((magit-merge "--no-ff")))
+
+    ;; I have diff.ignoreSubmodules=untracked in my git config which causes
+    ;; Magit to show a warning atop the buffer. Disable that as it appears to be
+    ;; inconsequential. https://github.com/magit/magit/discussions/5121
+    (remove-hook 'magit-status-headers-hook
+                 'magit-insert-diff-filter-header))
 
   (with-eval-after-load 'git-commit
     ;; Disable auto-fill-mode in git-commit-mode
