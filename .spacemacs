@@ -598,6 +598,13 @@ before packages are loaded."
      'counsel-projectile-switch-project-action
      '((default counsel-projectile-switch-project-action-vc))))
 
+  (defun path-in-nix-store-p (path)
+    "Whether a given path is inside the Nix store or not."
+    (string-prefix-p "/nix/store" path))
+  (with-eval-after-load 'projectile
+    ;; Don't consider anything in the Nix store to be a project of any sort
+    (setq projectile-ignored-project-function 'path-in-nix-store-p))
+
   ;; Re-center the screen when switching swiper results
   (setq swiper-action-recenter t)
 
