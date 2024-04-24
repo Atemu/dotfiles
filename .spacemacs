@@ -714,6 +714,8 @@ before packages are loaded."
      ;; Don't make minibuffer jump between being a mini- and maxibuffer
      eldoc-echo-area-use-multiline-p nil))
 
+  (setq xref-show-definitions-function #'ivy-xref-show-defs)
+
   ;; Disable dante-mode as it doesn't work for me and I use eglot instead
   (setq haskell-completion-backend nil)
 
