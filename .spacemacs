@@ -88,6 +88,7 @@ This function should only modify configuration layer settings."
                                       disk-usage
                                       envrc
                                       gcmh
+                                      nix-ts-mode
                                       git-annex
                                       ligature
                                       magit-annex
