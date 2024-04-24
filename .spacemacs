@@ -501,6 +501,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
    ;; No delay please
    show-paren-delay 0.01)
 
+  ;; Don't attempt to search for something in the current buffer as a
+  ;; definition. This is not how any of this works.
+  (delete 'evil-goto-definition-search evil-goto-definition-functions)
+
   (setq theming-modifications
         '((spacemacs-dark
            ;; Disable Spacemacs' org-mode heading font height adjustment
