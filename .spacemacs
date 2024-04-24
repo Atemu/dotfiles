@@ -505,6 +505,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; definition. This is not how any of this works.
   (delete 'evil-goto-definition-search evil-goto-definition-functions)
 
+  ;; Don't attempt to use hasktags in haskell-mode; use xref/eglot/LSP
+  (setq spacemacs-jump-handlers-haskell-mode '())
+
   (setq theming-modifications
         '((spacemacs-dark
            ;; Disable Spacemacs' org-mode heading font height adjustment
