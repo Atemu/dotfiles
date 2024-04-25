@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cp --remove-destination "$(readlink "$1")" "$1"
