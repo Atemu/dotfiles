@@ -862,6 +862,9 @@ before packages are loaded."
   ;; Collect garbage interactively
   (spacemacs/set-leader-keys "\\" 'garbage-collect)
 
+  ;; Stage the current buffer's file
+  (spacemacs/set-leader-keys "gS" 'magit-stage-buffer-file)
+
   ;; Make Magit git-annex integration accessible
   (spacemacs/set-leader-keys "g a" 'magit-annex-dispatch)
 
