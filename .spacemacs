@@ -502,10 +502,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
    ;; No delay please
    show-paren-delay 0.01)
 
-  ;; Don't attempt to search for something in the current buffer as a
-  ;; definition. This is not how any of this works.
-  (delete 'evil-goto-definition-search evil-goto-definition-functions)
-
   ;; Don't attempt to use hasktags in haskell-mode; use xref/eglot/LSP
   (setq spacemacs-jump-handlers-haskell-mode '())
 
@@ -685,15 +681,18 @@ before packages are loaded."
       (setq fill-column 80))
     (add-hook 'git-commit-setup-hook #'my/git-commit-hook))
 
-  ;; Don't try to record evil macros if the buffer is read-only
-  ;; Adapted from https://emacs.stackexchange.com/a/38364/26492
   (with-eval-after-load 'evil-maps
+    ;; Don't try to record evil macros if the buffer is read-only
+    ;; Adapted from https://emacs.stackexchange.com/a/38364/26492
     (define-key evil-normal-state-map (kbd "q")
       (lambda ()
         (interactive)
         (if buffer-read-only
             (quit-window)
-          (call-interactively 'evil-record-macro)))))
+          (call-interactively 'evil-record-macro))))
+    ;; Don't attempt to search for something in the current buffer as a
+    ;; definition. This is not how any of this works.
+    (delete 'evil-goto-definition-functions evil-goto-definition-functions))
 
   (require 'ivy-nixos-options)
 
