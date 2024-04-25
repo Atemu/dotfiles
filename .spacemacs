@@ -707,7 +707,9 @@ before packages are loaded."
      ;; Shut down LSP after buffers are gone
      eglot-autoshutdown t
      ;; Don't spam minibuffer with irrelevant progress messages
-     eglot-report-progress nil))
+     eglot-report-progress nil)
+    ;; Make nix-ts-mode use same setup as nix-mode
+    (add-to-list 'eglot-server-programs `(nix-ts-mode . ,(alist-get 'nix-mode eglot-server-programs))))
 
   (with-eval-after-load 'eldoc
     (setq
