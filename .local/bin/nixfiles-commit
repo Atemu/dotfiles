@@ -19,7 +19,7 @@ if ! isIndexClean ; then
 fi
 if isTreeClean ; then
     echo "Tree is clean, nothing to do."
-    exit 1
+    exit 0
 fi
 
 getSubmodules | while read submodule ; do
