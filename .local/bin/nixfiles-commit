@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# This script helps to automatically commit changes in submodules in nixfiles
+
+function isTreeClean() {
+    git diff --quiet --exit-code -- "${1:-.}"
+}
+
+function isIndexClean() {
+    git diff --quiet --exit-code --cached -- "${1:-.}"
+}
+
+function getSubmodules() {
+    git config --file .gitmodules --get-regexp path | awk '{ print $2 }'
+}
+
+if ! isIndexClean ; then
+    echo "Index is not clean, refusing to do anything."
+    exit 1
+fi
+if isTreeClean ; then
+    echo "Tree is clean, nothing to do."
+    exit 1
+fi
+
+getSubmodules | while read submodule ; do
+    if isTreeClean "$submodule" ; then
+        continue
+    fi
+
+    git diff --submodule=log "$submodule"
+    read -p "Update this submodule? " -n 1 -r < /dev/tty # <- Ugly workaround for bash
+    echo
+
+    if [[ ! $REPLY =~ ^[Yy]$ ]] && [[ ! $REPLY == "" ]] ; then
+        continue
+    fi
+
+    git add "$submodule" && git commit -m "$submodule: update"
+    echo Updated "$submodule"
+done
