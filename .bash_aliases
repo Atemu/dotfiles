@@ -28,6 +28,6 @@ alias nixfiles-update='(
       sudo sudo git -C /nix/var/nix/nixfiles submodule update ; \
       popd
       )'
-alias nix-stray-roots='nix-store --gc --print-roots | egrep -v "^(/nix/var|/run/\w+-system|\{memory|\{censored|/proc/maps/)"'
+alias nix-stray-roots='nix-store --gc --print-roots | grep -vE "^(/nix/var|/run/\w+-system|\{memory|\{censored|/proc/maps/)"'
 alias np='cd ~/Projects/nixpkgs'
 alias no='cd ~/Projects/nixos-config'
