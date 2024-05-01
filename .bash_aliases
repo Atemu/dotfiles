@@ -21,7 +21,13 @@ alias ecc='emacsclient -c'
 # TODO these should live in nixos-config
 alias nixos-update='sudo git -C /nix/var/nix/nixos-config reset --hard $NIXOS_REF'
 alias nixpkgs-update='sudo git -C /nix/var/nix/nixpkgs reset --hard $NIXPKGS_REF'
-alias nixfiles-update='sudo git -C /nix/var/nix/nixfiles reset --hard master && sudo sudo git -C /nix/var/nix/nixfiles submodule update'
+alias nixfiles-update='(
+      pushd ~/Projects/nixfiles/ && \
+      nixfiles-commit && \
+      sudo git -C /nix/var/nix/nixfiles reset --hard master && \
+      sudo sudo git -C /nix/var/nix/nixfiles submodule update ; \
+      popd
+      )'
 alias nix-stray-roots='nix-store --gc --print-roots | egrep -v "^(/nix/var|/run/\w+-system|\{memory|\{censored|/proc/maps/)"'
 alias np='cd ~/Projects/nixpkgs'
 alias no='cd ~/Projects/nixos-config'
