@@ -905,6 +905,9 @@ before packages are loaded."
 
      org-todo-keywords '((sequence "TODO" "|" "DONE" "ABRT"))))
 
+  ;; Monday is the start of the week.
+  (setq calendar-week-start-day 1)
+
   ;; Put LaTeX tmp files into /tmp/ instead of working dir
   ;; https://tex.stackexchange.com/a/111965
   (add-hook 'LaTeX-mode-hook (lambda ()
