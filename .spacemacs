@@ -692,7 +692,7 @@ before packages are loaded."
           (call-interactively 'evil-record-macro))))
     ;; Don't attempt to search for something in the current buffer as a
     ;; definition. This is not how any of this works.
-    (delete 'evil-goto-definition-functions evil-goto-definition-functions))
+    (delete 'evil-goto-definition-search evil-goto-definition-functions))
 
   (require 'ivy-nixos-options)
 
