@@ -31,3 +31,4 @@ alias nixfiles-update='(
 alias nix-stray-roots='nix-store --gc --print-roots | grep -vE "^(/nix/var|/run/\w+-system|\{memory|\{censored|/proc/maps/)"'
 alias np='cd ~/Projects/nixpkgs'
 alias no='cd ~/Projects/nixos-config'
+alias nf='cd ~/Projects/nixfiles'
