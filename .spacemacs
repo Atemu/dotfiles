@@ -908,6 +908,21 @@ before packages are loaded."
   ;; Monday is the start of the week.
   (setq calendar-week-start-day 1)
 
+  (define-ibuffer-filter read-only
+      "Limit current view to buffers that are read-only."
+    (:description "read-only"
+     :reader nil)
+    (buffer-local-value 'buffer-read-only buf))
+
+  (define-ibuffer-filter writable
+      "Limit current view to buffers that are writable."
+    (:description "writable"
+                  :reader nil)
+    (not (buffer-local-value 'buffer-read-only buf)))
+
+  (define-key ibuffer--filter-map (kbd "w") #'ibuffer-filter-by-writable)
+  (define-key ibuffer--filter-map (kbd "W") #'ibuffer-filter-by-read-only)
+
   ;; Put LaTeX tmp files into /tmp/ instead of working dir
   ;; https://tex.stackexchange.com/a/111965
   (add-hook 'LaTeX-mode-hook (lambda ()
