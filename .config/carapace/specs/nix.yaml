@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+name:  nix
+description: Upstream nix bash completions work better than current carapace completions
+parsing: disabled
+completion:
+  positionalany: ["$carapace.bridge.Bash([nix])"]
