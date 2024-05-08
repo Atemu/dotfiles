@@ -714,7 +714,15 @@ before packages are loaded."
   (with-eval-after-load 'eldoc
     (setq
      ;; Don't make minibuffer jump between being a mini- and maxibuffer
-     eldoc-echo-area-use-multiline-p nil))
+     eldoc-echo-area-use-multiline-p nil)
+    (add-hook
+     'eglot-managed-mode-hook
+     (lambda ()
+       (setq
+        eldoc-documentation-functions
+        '(flymake-eldoc-function
+          eglot-signature-eldoc-function
+          eglot-hover-eldoc-function)))))
 
   (setq xref-show-definitions-function #'ivy-xref-show-defs)
 
