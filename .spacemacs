@@ -935,10 +935,6 @@ before packages are loaded."
   ;; TODO all prog-modes should do this
   (font-lock-add-keywords 'nix-mode '(("`\\([a-z-]+\\)'" 1 'font-lock-constant-face prepend)))
 
-  ;; TODO how do you only require a mode when it's auto loaded?
-  (require 'nix-ts-mode)
-  (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode))
-
   ;; Enable ligatures
   (require 'ligature)
   (global-ligature-mode t)
