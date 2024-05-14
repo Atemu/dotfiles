@@ -711,6 +711,8 @@ before packages are loaded."
     ;; Make nix-ts-mode use same setup as nix-mode
     (add-to-list 'eglot-server-programs `(nix-ts-mode . ,(alist-get 'nix-mode eglot-server-programs))))
 
+  (add-hook 'nix-mode-hook 'eglot-ensure)
+
   (with-eval-after-load 'eldoc
     (setq
      ;; Don't make minibuffer jump between being a mini- and maxibuffer
