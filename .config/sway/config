@@ -35,5 +35,8 @@ input 1221:5258:HID_04c5:148a_Mouse {
   pointer_accel 1
 }
 
+# Lock the system
+bindsym --no-warn $mod+Escape exec swaylock --daemonize
+
 # suspend the system
 bindsym --no-warn $mod+Shift+s exec swaylock --daemonize && sleep 1 && systemctl suspend
