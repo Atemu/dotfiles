@@ -167,7 +167,7 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 bindsym $mod+Shift+s exec i3lock && sleep 1 && systemctl suspend
 
 # lock the screen
-bindsym $mod+Escape exec "physlock"
+bindsym $mod+Escape exec i3lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
