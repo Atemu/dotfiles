@@ -712,6 +712,10 @@ before packages are loaded."
     (add-to-list 'eglot-server-programs `(nix-ts-mode . ,(alist-get 'nix-mode eglot-server-programs))))
 
   (add-hook 'nix-mode-hook 'eglot-ensure)
+  (add-hook 'nix-mode-hook
+            (lambda ()
+              (setq eglot-ignored-server-capabilities
+                    (append eglot-ignored-server-capabilities '(:hoverProvider :documentHighlightProvider)))))
 
   (with-eval-after-load 'eldoc
     (setq
