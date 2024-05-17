@@ -33,3 +33,4 @@ alias np='cd ~/Projects/nixpkgs'
 alias no='cd ~/Projects/nixos-config'
 alias nf='cd ~/Projects/nixfiles'
 alias ssh='.ssh_backoff' # My ssh wrapper that implements exponential back-off
+alias nixgc="sudo nix-collect-garbage --delete-older-than 30d && nix-collect-garbage --delete-older-than 30d && nix store optimise"
