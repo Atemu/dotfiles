@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# OpenSSH does not support exponential back-off which is really annoying.
+# This script hacks it in. Simply alias ssh=.ssh_backoff
+
+timeout=1
+max_timeout=30
+attempts=0
+max_attempts=10
+
+while [ $attempts -lt $max_attempts ] ; do
+    ssh -o ConnectTimeout=$timeout -o ConnectionAttempts=1 "$@"
+
+    exit_code=$?
+    if [ $exit_code -ne 255 ] ; then
+        exit $exit_code
+    fi
+
+    new=$[$timeout * 2]
+    timeout=$(($new > $max_timeout ? $max_timeout : $new))
+    attempts=$[$attempts + 1]
+done
+
+exit 255
