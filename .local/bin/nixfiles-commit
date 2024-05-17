@@ -2,7 +2,7 @@
 # This script helps to automatically commit changes in submodules in nixfiles
 
 function isTreeClean() {
-    git diff --quiet --exit-code -- "${1:-.}"
+    git -c diff.ignoreSubmodules=dirty diff --quiet --exit-code -- "${1:-.}"
 }
 
 function isIndexClean() {
