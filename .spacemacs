@@ -44,6 +44,7 @@ This function should only modify configuration layer settings."
      docker
      emacs-lisp
      (git :variables git-enable-magit-delta-plugin t)
+     go
      groovy
      haskell
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
