@@ -715,7 +715,7 @@ before packages are loaded."
   (add-hook 'nix-mode-hook 'eglot-ensure)
   (defun custom-nix-mode-hook ()
     (require 'eglot)
-    (setq eglot-ignored-server-capabilities
+    (setq-local eglot-ignored-server-capabilities
           (append eglot-ignored-server-capabilities '(:hoverProvider :documentHighlightProvider))))
   (add-hook 'nix-mode-hook 'custom-nix-mode-hook)
 
