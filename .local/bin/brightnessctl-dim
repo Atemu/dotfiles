@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Lowers brightness by some amount down to a certain minimum but only if we're
+# actually above the minimum already to avoid setting a higher brightness.
+# This is intended to be used in an idle setup which restores brightness using
+# `brightnessctl -r`
+
+reduce=${1:-80}
+min=${2:-10}
+
+current=$(brightnessctl get)
+
+if [ $current -gt $min ] ; then
+    brightnessctl -s set --min-value=$min $reduce%-
+else
+    # Save the current value so that it will be restored when no longer idle
+    brightnessctl -s set $current
+fi
