@@ -5,7 +5,7 @@
 # `brightnessctl -r`
 
 reduce=${1:-80}
-min=${2:-10}
+min=${2:-1}
 
 current=$(brightnessctl get)
 
