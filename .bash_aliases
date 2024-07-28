@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+# ^ hey emacs, this is bash code
 alias ls='ls --color'
 alias l='ls -lAhv --time-style=long-iso'
 alias ll='ls -lhv --time-style=long-iso'
@@ -10,7 +12,7 @@ alias 8601ue='echo $(8601e -u)Z'
 alias cp='cp --reflink=auto'
 alias cps='cp --sparse=auto'
 alias sudo='sudo ' #pass aliases to sudo https://askubuntu.com/a/22043/863714
-alias iomon='iostat --human 1 /dev/sd? /dev/mmcblk? /dev/vd?' #io monitoring command
+alias iomon='iostat --human --pretty 1 /dev/sd? /dev/mmcblk? /dev/vd? /dev/nvme?n?' #io monitoring command
 alias please='sudo '
 alias fucking='sudo '
 alias ip='ip --color'
@@ -32,5 +34,4 @@ alias nix-stray-roots='nix-store --gc --print-roots | grep -vE "^(/nix/var|/run/
 alias np='cd ~/Projects/nixpkgs'
 alias no='cd ~/Projects/nixos-config'
 alias nf='cd ~/Projects/nixfiles'
-alias ssh='.ssh_backoff' # My ssh wrapper that implements exponential back-off
 alias nixgc="sudo nix-collect-garbage --delete-older-than 30d && nix-collect-garbage --delete-older-than 30d && nix store optimise"
