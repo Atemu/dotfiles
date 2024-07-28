@@ -1,5 +1,5 @@
 [user]
-	email = atemu.main@gmail.com
+	email = git@atemu.net
 	name = Atemu
 
 [includeIf "gitdir/i:~/Work/"]
