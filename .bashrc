@@ -48,3 +48,7 @@ fi
 
 #enable vi mode
 set -o vi
+
+if type -p complete_alias > /dev/null; then
+    source $(type -p complete_alias)
+fi
