@@ -56,6 +56,7 @@ if type -p complete_alias > /dev/null; then
         sc
         ssc
         scu
+        dfh
     )
 
     for c in "${aliases[@]}" ; do

@@ -38,3 +38,4 @@ alias nixgc="sudo nix-collect-garbage --delete-older-than 30d && nix-collect-gar
 alias sc="systemctl"
 alias ssc="sudo systemctl"
 alias scu="systemctl --user"
+alias dfh="df -h"
