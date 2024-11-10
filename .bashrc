@@ -51,4 +51,14 @@ set -o vi
 
 if type -p complete_alias > /dev/null; then
     source $(type -p complete_alias)
+
+    aliases=(
+        sc
+        ssc
+        scu
+    )
+
+    for c in "${aliases[@]}" ; do
+        complete -F _complete_alias $c
+    done
 fi
