@@ -10,7 +10,6 @@ alias 8601e='date +%Y-%m-%dT%H\:%M\:%S'
 alias 8601u='echo $(8601 -u)Z'
 alias 8601ue='echo $(8601e -u)Z'
 alias cp='cp --reflink=auto'
-alias cps='cp --sparse=auto'
 alias sudo='sudo ' #pass aliases to sudo https://askubuntu.com/a/22043/863714
 alias iomon='iostat --human --pretty 1 /dev/sd? /dev/mmcblk? /dev/vd? /dev/nvme?n?' #io monitoring command
 alias please='sudo '
