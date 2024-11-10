@@ -35,3 +35,6 @@ alias np='cd ~/Projects/nixpkgs'
 alias no='cd ~/Projects/nixos-config'
 alias nf='cd ~/Projects/nixfiles'
 alias nixgc="sudo nix-collect-garbage --delete-older-than 30d && nix-collect-garbage --delete-older-than 30d && nix store optimise"
+alias sc="systemctl"
+alias ssc="sudo systemctl"
+alias scu="systemctl --user"
