@@ -586,7 +586,7 @@ before packages are loaded."
 
   ;; Enable Garbage Collector Magic Hack
   (gcmh-mode 1)
-  (setq gcmh-idle-delay 1)
+  (setq gcmh-idle-delay 4)
 
   (with-eval-after-load 'ivy
     ;; Add HELM's minibuffer helm-find-files-up-one-level keybinding to Ivy
