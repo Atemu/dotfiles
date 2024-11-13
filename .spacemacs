@@ -71,7 +71,6 @@ This function should only modify configuration layer settings."
      systemd
      theming
      treemacs
-     typescript
      (version-control :variables version-control-diff-tool 'git-gutter)
      yaml
      )
