@@ -604,13 +604,13 @@ before packages are loaded."
      'counsel-projectile-switch-project-action
      '((default counsel-projectile-switch-project-action-vc))))
 
-  (defun path-in-nix-store-p (path)
-    "Whether a given path is inside the Nix store or not."
-    (string-prefix-p "/nix/store" path))
+  (defun path-in-nix-dir-p (path)
+    "Whether a given path is inside the Nix directory or not."
+    (string-prefix-p "/nix/" path))
   (with-eval-after-load 'projectile
     (setq
      ;; Don't consider anything in the Nix store to be a project of any sort
-     projectile-ignored-project-function 'path-in-nix-store-p
+     projectile-ignored-project-function 'path-in-nix-dir-p
 
      projectile-project-search-path '(("~/Projects" . 1) ("~/Repos" . 1))))
 
