@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# For use with bad programs that don't have a man page.
+
+command="$1"
+shift
+
+[ -z "$command" ] && echo "You must provide a command" && exit 1
+
+PAGER="${PAGER:-less}"
+
+"$command" --help "$@" | "$PAGER"
