@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+pullDefault="$(git config remote.pullDefault)"
+
+if [ -z "$pullDefault" ]; then
+    echo "remote.pullDefault must be set"
+    exit 1
+fi
+
+pullNumber="$1"
+
+git fetch $pullDefault refs/pull/$pullNumber/head
+git checkout FETCH_HEAD
